@@ -1,0 +1,50 @@
+2016-03-10 19:39:01,933 INFO  crawl.Injector - Injector: starting at 2016-03-10 19:39:01
+2016-03-10 19:39:01,933 INFO  crawl.Injector - Injector: crawlDb: 101Crawlers
+2016-03-10 19:39:01,933 INFO  crawl.Injector - Injector: urlDir: /home/jorge/Escritorio/trunk/urls
+2016-03-10 19:39:01,934 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2016-03-10 19:39:02,110 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-03-10 19:39:02,389 WARN  mapreduce.JobSubmitter - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-03-10 19:39:02,681 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge508524691/.staging/job_local508524691_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-10 19:39:02,692 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge508524691/.staging/job_local508524691_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-10 19:39:02,846 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local508524691_0001/job_local508524691_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-10 19:39:02,855 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local508524691_0001/job_local508524691_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-10 19:39:03,177 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2016-03-10 19:39:03,308 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2016-03-10 19:39:03,418 INFO  crawl.Injector - Injector: overwrite: false
+2016-03-10 19:39:03,418 INFO  crawl.Injector - Injector: update: false
+2016-03-10 19:39:03,909 INFO  crawl.Injector - Injector: Total number of urls rejected by filters: 0
+2016-03-10 19:39:03,909 INFO  crawl.Injector - Injector: Total number of urls after normalization: 2
+2016-03-10 19:39:03,914 INFO  crawl.Injector - Injector: Total new urls injected: 2
+2016-03-10 19:39:03,914 INFO  crawl.Injector - Injector: finished at 2016-03-10 19:39:03, elapsed: 00:00:01
+2016-03-10 22:02:58,181 INFO  crawl.Injector - Injector: starting at 2016-03-10 22:02:58
+2016-03-10 22:02:58,182 INFO  crawl.Injector - Injector: crawlDb: 101Crawlers
+2016-03-10 22:02:58,182 INFO  crawl.Injector - Injector: urlDir: /home/jorge/Escritorio/trunk/urls
+2016-03-10 22:02:58,182 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2016-03-10 22:02:58,299 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-03-10 22:02:58,564 WARN  mapreduce.JobSubmitter - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-03-10 22:02:58,582 ERROR crawl.Injector - Injector: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: file:/home/jorge/Escritorio/trunk/urls
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:285)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:228)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:304)
+	at org.apache.hadoop.mapreduce.JobSubmitter.writeOldSplits(JobSubmitter.java:520)
+	at org.apache.hadoop.mapreduce.JobSubmitter.writeSplits(JobSubmitter.java:512)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:394)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1285)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1282)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1548)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1282)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:562)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1548)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:557)
+	at org.apache.hadoop.mapred.JobClient.submitJob(JobClient.java:548)
+	at org.apache.hadoop.mapred.JobClient.runJob(JobClient.java:833)
+	at org.apache.nutch.crawl.Injector.inject(Injector.java:323)
+	at org.apache.nutch.crawl.Injector.run(Injector.java:379)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.nutch.crawl.Injector.main(Injector.java:369)
+

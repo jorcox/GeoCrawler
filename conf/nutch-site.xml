@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+   <name>http.robots.agents</name>
+   <value>*</value>
+ </property>
+
+<property>
+   <name>http.agent.name</name>
+   <value>101Crawlers</value>
+ </property>
+
+<property>
+   <name>plugin.folders</name>
+   <value>/home/jorge/Escritorio/trunk/build/plugins</value>
+ </property>
+
+</configuration>
