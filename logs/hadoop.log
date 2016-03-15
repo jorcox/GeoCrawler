@@ -1,0 +1,25 @@
+2016-03-12 11:17:38,724 INFO  crawl.Injector - Injector: starting at 2016-03-12 11:17:38
+2016-03-12 11:17:38,725 INFO  crawl.Injector - Injector: crawlDb: 101Crawlers
+2016-03-12 11:17:38,725 INFO  crawl.Injector - Injector: urlDir: /home/jorge/Escritorio/Almacen/repo/urls
+2016-03-12 11:17:38,726 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2016-03-12 11:17:39,071 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-03-12 11:17:39,446 WARN  mapreduce.JobSubmitter - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-03-12 11:17:39,800 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge144452324/.staging/job_local144452324_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-12 11:17:39,812 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge144452324/.staging/job_local144452324_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-12 11:17:40,001 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local144452324_0001/job_local144452324_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-12 11:17:40,007 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local144452324_0001/job_local144452324_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-12 11:17:40,596 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2016-03-12 11:17:40,765 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2016-03-12 11:17:41,069 INFO  crawl.Injector - Injector: Total number of urls rejected by filters: 0
+2016-03-12 11:17:41,069 INFO  crawl.Injector - Injector: Total number of urls after normalization: 2
+2016-03-12 11:17:41,069 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2016-03-12 11:17:41,088 WARN  mapreduce.JobSubmitter - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-03-12 11:17:41,173 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge89928684/.staging/job_local89928684_0002/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-12 11:17:41,176 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/staging/jorge89928684/.staging/job_local89928684_0002/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-12 11:17:41,246 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local89928684_0002/job_local89928684_0002.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2016-03-12 11:17:41,248 WARN  conf.Configuration - file:/tmp/hadoop-jorge/mapred/local/localRunner/jorge/job_local89928684_0002/job_local89928684_0002.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2016-03-12 11:17:41,455 INFO  crawl.Injector - Injector: overwrite: false
+2016-03-12 11:17:41,455 INFO  crawl.Injector - Injector: update: false
+2016-03-12 11:17:42,279 INFO  crawl.Injector - Injector: URLs merged: 2
+2016-03-12 11:17:42,283 INFO  crawl.Injector - Injector: Total new urls injected: 0
+2016-03-12 11:17:42,284 INFO  crawl.Injector - Injector: finished at 2016-03-12 11:17:42, elapsed: 00:00:03

@@ -1,0 +1,384 @@
+2016-03-15 13:21:32,290 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:21:32,506 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:21:38,429 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 13:21:38,429 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:21:38,737 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 13:21:38,737 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:21:38,879 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 13:21:39,097 INFO  feature.FeatureBuilderTermNest - Batch done500 end: tetrarca
+2016-03-15 13:21:39,258 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: g neros diverso
+2016-03-15 13:21:39,350 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: d getelementsbytagname
+2016-03-15 13:26:24,865 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:26:25,066 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:26:30,887 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 13:26:30,887 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:26:31,211 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 13:26:31,211 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:26:31,365 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 13:26:31,566 INFO  feature.FeatureBuilderTermNest - Batch done500 end: tetrarca
+2016-03-15 13:26:31,676 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: g neros diverso
+2016-03-15 13:26:31,786 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: d getelementsbytagname
+2016-03-15 13:26:58,247 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:26:58,595 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:26:58,814 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:26:59,552 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:26:59,573 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:27:04,898 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:27:05,961 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:27:07,285 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:27:07,288 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:27:16,131 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:27:47,596 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:30:46,639 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:30:50,122 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:44:23,417 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:44:23,962 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:44:24,215 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:44:25,209 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:44:25,245 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:44:33,528 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:44:35,018 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:44:52,775 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:44:57,818 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:45:11,485 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:46:09,263 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:48:44,121 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:48:44,454 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:48:44,648 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:48:45,405 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:48:45,428 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:48:50,806 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:48:53,132 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:48:54,645 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:49:01,525 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:49:10,881 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:52:26,321 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:52:26,692 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:52:26,897 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:52:27,739 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:52:27,762 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:52:33,040 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:52:34,275 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:52:36,860 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:52:53,391 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:52:58,667 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:52:59,092 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:52:59,316 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:53:00,091 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:53:00,117 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:53:04,285 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:53:07,176 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:53:08,708 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:53:17,022 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:53:41,787 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:53:41,970 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:53:42,669 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 13:53:42,691 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 13:53:57,453 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 13:53:58,709 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 13:54:02,303 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 13:54:25,147 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 13:54:25,148 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 13:55:23,388 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 13:55:23,607 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 13:55:55,917 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 14:20:30,489 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 14:20:30,831 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:20:31,028 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 14:20:31,780 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:20:31,803 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 14:20:37,124 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 14:20:38,328 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 14:20:41,001 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 14:20:44,069 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 14:20:44,146 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:20:44,285 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 14:20:44,968 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:20:44,991 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 14:20:51,440 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 14:20:52,760 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 14:20:56,107 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 14:21:03,662 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 14:21:03,663 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:21:54,922 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 14:21:55,260 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:21:55,457 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 14:21:56,221 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:21:56,244 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 14:22:01,669 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 14:22:02,812 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 14:22:04,393 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 14:22:13,373 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 14:22:13,448 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:22:14,811 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-chunker.bin
+2016-03-15 14:22:15,456 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:22:15,480 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/bnc_unifrqs.normal
+2016-03-15 14:22:21,879 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-perceptron.bin
+2016-03-15 14:22:23,188 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-pos-maxent.bin
+2016-03-15 14:22:26,792 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/stoplist.txt
+2016-03-15 14:22:48,450 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 14:22:48,450 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-token.bin
+2016-03-15 14:22:50,878 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/en-sent.bin
+2016-03-15 14:24:17,109 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:24:17,183 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:24:17,384 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:24:17,385 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:24:17,502 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 14:24:17,502 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:24:17,504 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:24:17,815 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 14:24:17,815 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
+2016-03-15 14:25:34,474 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:25:34,515 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:25:34,713 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:25:34,788 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:25:36,036 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:25:40,502 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:25:52,082 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:25:52,128 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:25:52,309 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:25:55,153 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:25:56,581 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:26:01,338 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:26:30,200 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:26:30,253 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:26:30,457 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:26:31,055 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:26:32,576 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:26:37,502 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:28:05,980 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 14:28:05,980 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:28:05,984 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:28:06,405 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:28:06,743 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 14:28:06,743 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:28:06,744 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:28:06,881 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:28:06,966 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 14:28:07,237 INFO  feature.FeatureBuilderTermNest - Batch done500 end: teatral
+2016-03-15 14:28:07,393 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: reiteradas ocasione
+2016-03-15 14:28:07,550 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: referencia
+2016-03-15 14:28:51,699 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:28:51,744 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:28:51,925 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:28:54,320 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:28:55,689 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:29:00,249 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:29:09,974 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 14:29:09,974 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:29:09,978 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:29:10,374 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:29:10,692 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 14:29:10,693 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:29:10,694 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:29:10,831 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:29:10,911 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 14:29:11,206 INFO  feature.FeatureBuilderTermNest - Batch done500 end: teatral
+2016-03-15 14:29:11,398 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: reiteradas ocasione
+2016-03-15 14:29:11,549 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: referencia
+2016-03-15 14:29:17,399 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 14:29:17,399 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 14:29:17,402 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 14:29:17,617 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 14:29:36,159 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 14:29:36,159 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
+2016-03-15 14:29:36,273 INFO  test.AlgorithmTester - Running feature store builder and ATR...RIDF_ALGORITHM
+2016-03-15 14:29:36,330 INFO  test.AlgorithmTester - Running feature store builder and ATR...AverageCorpusTF_ALGORITHM
+2016-03-15 14:29:36,381 INFO  test.AlgorithmTester - Running feature store builder and ATR...Simple_term_frequency_ALGORITHM
+2016-03-15 14:29:36,411 INFO  test.AlgorithmTester - Running feature store builder and ATR...CValue_ALGORITHM
+2016-03-15 14:29:36,472 INFO  test.AlgorithmTester - Running feature store builder and ATR...IBM_GlossEx_ALGORITHM
+2016-03-15 14:29:36,511 INFO  test.AlgorithmTester - Running feature store builder and ATR...TermEx_ALGORITHM
+2016-03-15 14:29:36,553 INFO  test.AlgorithmTester - Running feature store builder and ATR...Weirdness_ALGORITHM
+2016-03-15 16:54:18,022 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 16:54:18,065 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 16:54:18,261 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 16:54:19,747 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 16:54:24,151 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 16:54:24,151 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 16:54:24,153 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 16:54:24,476 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 16:54:24,476 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 16:54:24,477 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 16:54:24,662 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 16:54:24,908 INFO  feature.FeatureBuilderTermNest - Batch done500 end: p el otro
+2016-03-15 16:54:25,129 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: lujurioso trae
+2016-03-15 16:54:25,242 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: insensatez
+2016-03-15 16:54:25,718 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 16:54:25,718 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 16:54:25,720 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 16:54:25,865 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 16:54:25,865 INFO  test.AlgorithmTester - Running feature store builder and ATR...Weirdness_ALGORITHM
+2016-03-15 16:54:25,921 INFO  test.AlgorithmTester - Running feature store builder and ATR...RIDF_ALGORITHM
+2016-03-15 16:54:25,962 INFO  test.AlgorithmTester - Running feature store builder and ATR...CValue_ALGORITHM
+2016-03-15 16:54:25,989 INFO  test.AlgorithmTester - Running feature store builder and ATR...TermEx_ALGORITHM
+2016-03-15 16:54:26,025 INFO  test.AlgorithmTester - Running feature store builder and ATR...Simple_term_frequency_ALGORITHM
+2016-03-15 16:54:26,040 INFO  test.AlgorithmTester - Running feature store builder and ATR...AverageCorpusTF_ALGORITHM
+2016-03-15 16:54:26,051 INFO  test.AlgorithmTester - Running feature store builder and ATR...IBM_GlossEx_ALGORITHM
+2016-03-15 16:54:26,069 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
+2016-03-15 18:04:02,527 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:04:02,672 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:04:02,709 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:04:02,773 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:04:02,790 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:04:02,808 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:04:02,826 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:04:02,843 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:04:02,858 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:04:02,870 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:04:02,884 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:04:11,879 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:04:11,885 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:04:15,756 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:04:22,827 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:04:27,176 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:04:34,574 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:04:40,090 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:04:45,595 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:04:53,030 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:05:00,578 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:05:00,579 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:05:00,793 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:05:00,795 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:05:00,895 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:05:01,249 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:05:01,358 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:05:01,543 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:05:01,655 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:05:01,832 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:05:01,943 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:05:02,030 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 18:05:02,030 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:05:02,069 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:05:02,070 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:05:02,097 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:05:02,244 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:05:02,301 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:05:02,348 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:05:02,388 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:05:02,433 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:05:02,476 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:05:02,505 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 18:05:02,772 INFO  feature.FeatureBuilderTermNest - Batch done500 end: virgilio virgilio
+2016-03-15 18:05:03,003 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: areusa
+2016-03-15 18:05:03,212 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: cita
+2016-03-15 18:05:03,430 INFO  feature.FeatureBuilderTermNest - Batch done2000 end: 0 001487440301630784 anta
+2016-03-15 18:05:03,652 INFO  feature.FeatureBuilderTermNest - Batch done2500 end: auto
+2016-03-15 18:05:03,863 INFO  feature.FeatureBuilderTermNest - Batch done3000 end: 3 107543715643506 una
+2016-03-15 18:05:04,372 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:05:04,372 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:05:04,412 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:05:04,413 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:05:04,439 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:05:04,582 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:05:04,637 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:05:04,683 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:05:04,721 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:05:04,765 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:05:04,808 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:05:04,841 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 18:05:04,841 INFO  test.AlgorithmTester - Running feature store builder and ATR...Simple_term_frequency_ALGORITHM
+2016-03-15 18:05:04,901 INFO  test.AlgorithmTester - Running feature store builder and ATR...CValue_ALGORITHM
+2016-03-15 18:05:04,958 INFO  test.AlgorithmTester - Running feature store builder and ATR...RIDF_ALGORITHM
+2016-03-15 18:05:04,997 INFO  test.AlgorithmTester - Running feature store builder and ATR...Weirdness_ALGORITHM
+2016-03-15 18:05:05,038 INFO  test.AlgorithmTester - Running feature store builder and ATR...AverageCorpusTF_ALGORITHM
+2016-03-15 18:05:05,058 INFO  test.AlgorithmTester - Running feature store builder and ATR...IBM_GlossEx_ALGORITHM
+2016-03-15 18:05:05,100 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
+2016-03-15 18:05:05,214 INFO  test.AlgorithmTester - Running feature store builder and ATR...TermEx_ALGORITHM
+2016-03-15 18:05:05,281 INFO  test.AlgorithmTester - Running feature store builder and ATR...Justeson&Katz_ALGORITHM
+2016-03-15 18:06:16,857 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:06:17,062 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:06:17,105 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:06:17,180 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:06:17,209 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:06:17,241 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:06:17,281 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:06:17,309 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:06:17,336 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:06:17,359 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:06:17,386 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:06:53,056 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:06:53,061 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:06:56,682 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:07:29,852 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:07:38,979 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:07:58,608 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:07:58,657 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:07:58,871 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:00,667 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:06,361 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:08:06,361 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:06,363 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:06,701 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 18:08:06,701 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:06,702 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:06,859 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 18:08:07,131 INFO  feature.FeatureBuilderTermNest - Batch done500 end: p el otro
+2016-03-15 18:08:07,245 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: lujurioso trae
+2016-03-15 18:08:07,360 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: insensatez
+2016-03-15 18:08:07,935 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:08:07,935 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:07,937 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:08,102 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 18:08:08,102 INFO  test.AlgorithmTester - Running feature store builder and ATR...RIDF_ALGORITHM
+2016-03-15 18:08:08,155 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
+2016-03-15 18:08:08,209 INFO  test.AlgorithmTester - Running feature store builder and ATR...IBM_GlossEx_ALGORITHM
+2016-03-15 18:08:08,256 INFO  test.AlgorithmTester - Running feature store builder and ATR...CValue_ALGORITHM
+2016-03-15 18:08:08,293 INFO  test.AlgorithmTester - Running feature store builder and ATR...TermEx_ALGORITHM
+2016-03-15 18:08:08,346 INFO  test.AlgorithmTester - Running feature store builder and ATR...Simple_term_frequency_ALGORITHM
+2016-03-15 18:08:08,359 INFO  test.AlgorithmTester - Running feature store builder and ATR...Weirdness_ALGORITHM
+2016-03-15 18:08:08,388 INFO  test.AlgorithmTester - Running feature store builder and ATR...AverageCorpusTF_ALGORITHM
+2016-03-15 18:08:10,547 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:08:16,342 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:08:21,732 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:08:28,589 INFO  indexer.GlobalIndexBuilderMem - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:08:35,673 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:08:35,673 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:08:36,026 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:36,027 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:08:36,142 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:36,435 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:08:36,574 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:08:36,859 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:08:36,996 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:08:37,257 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:08:37,399 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:08:37,494 INFO  feature.FeatureBuilderDocumentTermFrequency - About to build FeatureDocumentTermFrequency...
+2016-03-15 18:08:37,494 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:08:37,559 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:37,560 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:08:37,601 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:37,739 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:08:37,830 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:08:37,877 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:08:37,941 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:08:37,985 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:08:38,030 INFO  feature.FeatureBuilderDocumentTermFrequency - For document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:08:38,059 INFO  feature.FeatureBuilderTermNest - About to build FeatureTermNest...
+2016-03-15 18:08:38,424 INFO  feature.FeatureBuilderTermNest - Batch done500 end: 282090081155099 lo
+2016-03-15 18:08:38,757 INFO  feature.FeatureBuilderTermNest - Batch done1000 end: dice
+2016-03-15 18:08:39,057 INFO  feature.FeatureBuilderTermNest - Batch done1500 end: di logo
+2016-03-15 18:08:39,361 INFO  feature.FeatureBuilderTermNest - Batch done2000 end: 0 9118626217697144 la
+2016-03-15 18:08:39,751 INFO  feature.FeatureBuilderTermNest - Batch done2500 end: var dm videoid
+2016-03-15 18:08:40,051 INFO  feature.FeatureBuilderTermNest - Batch done3000 end: muy manera muy
+2016-03-15 18:08:40,340 INFO  feature.FeatureBuilderTermNest - Batch done3500 end: tico
+2016-03-15 18:08:40,631 INFO  feature.FeatureBuilderTermNest - Batch done4000 end: 34567687170520284 pronunciaci
+2016-03-15 18:08:41,131 INFO  feature.FeatureBuilderCorpusTermFrequency - About to build FeatureCorpusTermFrequency...
+2016-03-15 18:08:41,131 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TermEx_ALGORITHM.txt
+2016-03-15 18:08:41,194 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/sub/
+2016-03-15 18:08:41,195 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Simple_term_frequency_ALGORITHM.txt
+2016-03-15 18:08:41,233 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/celestina.html
+2016-03-15 18:08:41,369 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/RIDF_ALGORITHM.txt
+2016-03-15 18:08:41,459 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/IBM_GlossEx_ALGORITHM.txt
+2016-03-15 18:08:41,504 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/CValue_ALGORITHM.txt
+2016-03-15 18:08:41,566 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/Weirdness_ALGORITHM.txt
+2016-03-15 18:08:41,610 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/TfIdf_ALGORITHM.txt
+2016-03-15 18:08:41,652 INFO  feature.FeatureBuilderCorpusTermFrequency - For Document file:/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/res/AverageCorpusTF_ALGORITHM.txt
+2016-03-15 18:08:41,683 INFO  test.AlgorithmTester - Running NP recognition...
+2016-03-15 18:08:41,683 INFO  test.AlgorithmTester - Running feature store builder and ATR...CValue_ALGORITHM
+2016-03-15 18:08:41,778 INFO  test.AlgorithmTester - Running feature store builder and ATR...TermEx_ALGORITHM
+2016-03-15 18:08:41,883 INFO  test.AlgorithmTester - Running feature store builder and ATR...AverageCorpusTF_ALGORITHM
+2016-03-15 18:08:41,923 INFO  test.AlgorithmTester - Running feature store builder and ATR...Weirdness_ALGORITHM
+2016-03-15 18:08:41,971 INFO  test.AlgorithmTester - Running feature store builder and ATR...IBM_GlossEx_ALGORITHM
+2016-03-15 18:08:42,022 INFO  test.AlgorithmTester - Running feature store builder and ATR...Simple_term_frequency_ALGORITHM
+2016-03-15 18:08:42,038 INFO  test.AlgorithmTester - Running feature store builder and ATR...RIDF_ALGORITHM
+2016-03-15 18:08:42,075 INFO  test.AlgorithmTester - Running feature store builder and ATR...TfIdf_ALGORITHM
