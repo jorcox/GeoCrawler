@@ -188,6 +188,7 @@ public class JATETest {
 				// Before with multi-threaded feature builders, one instance of
 				// TermFreqCounter is created for each
 				// thread.
+				System.out.println("Carga de terminos");
 				TermFreqCounter npcounter = new TermFreqCounter();
 				FeatureCorpusTermFrequency wordFreq = new FeatureBuilderCorpusTermFrequency(npcounter, wordcounter,
 						lemmatizer).build(wordDocIndex);
@@ -214,6 +215,7 @@ public class JATETest {
 				// encapsulate the underlying feature (stores) and provide
 				// access to only the features required by the corresponding
 				// algorithm
+				System.out.println("Empiezan los algoritmos");
 				tester.registerAlgorithm(new TFIDFAlgorithm(), new TFIDFFeatureWrapper(termCorpusFreq));
 				tester.registerAlgorithm(new GlossExAlgorithm(),
 						new GlossExFeatureWrapper(termCorpusFreq, wordFreq, bncRef));
