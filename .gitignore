@@ -3,6 +3,7 @@
 build/*
 .project
 .classpath
+/hadoop.log
 
 /inject-temp-*
 /build/
