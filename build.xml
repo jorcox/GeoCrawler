@@ -230,6 +230,8 @@
       <packageset dir="${plugins.dir}/urlnormalizer-regex/src/java"/>
       <packageset dir="${plugins.dir}/urlnormalizer-slash/src/java"/>
 
+      <packageset dir="${plugins.dir}/index-length/src/java"/>
+
       <link href="${javadoc.link.java}"/>
       <link href="${javadoc.link.lucene}"/>
       <link href="${javadoc.link.hadoop}"/>
@@ -1096,6 +1098,10 @@
         <source path="${plugins.dir}/urlnormalizer-regex/src/test/" />
         <source path="${plugins.dir}/urlnormalizer-slash/src/java/" />
         <source path="${plugins.dir}/urlnormalizer-slash/src/test/" />
+
+          <source path="${plugins.dir}/index-length/src/java/" />
+          <source path="${plugins.dir}/index-length/src/test/" />
+
 
         <output path="${build.classes}" />
       </classpath>
