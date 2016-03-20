@@ -7,14 +7,13 @@ import org.apache.nutch.crawl.Inlinks;
 import org.apache.nutch.indexer.IndexingException;
 import org.apache.nutch.indexer.IndexingFilter;
 import org.apache.nutch.indexer.NutchDocument;
-import org.apache.nutch.indexer.geoip.GeoIPIndexingFilter;
 import org.apache.nutch.parse.Parse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LengthIndexingFilter implements IndexingFilter {
 
-	private static final Logger LOG = LoggerFactory.getLogger(GeoIPIndexingFilter.class);
+	private static final Logger LOG = LoggerFactory.getLogger(LengthIndexingFilter.class);
 
 	private Configuration conf;
 
