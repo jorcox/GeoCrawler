@@ -18,6 +18,12 @@
 <project name="parse-ogc" default="jar-core">
 
   <import file="../build-plugin.xml"/>
+	
+  <path id="plugin.deps">
+  	<fileset dir="${nutch.root}/build">
+  		<include name="**/lib-xml/*.jar"/>
+  	</fileset>
+  </path>
 
   <!-- Deploy Unit test dependencies -->
   <target name="deps-test">
