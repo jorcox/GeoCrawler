@@ -27,7 +27,7 @@
   </info>
 
   <configurations>
-    <include file="../../..//ivy/ivy-configurations.xml"/>
+      <include file="../../..//ivy/ivy-configurations.xml"/>
   </configurations>
 
   <publications>
@@ -36,6 +36,15 @@
   </publications>
 
   <dependencies>
+    <dependency org="org.apache.hadoop" name="hadoop-common" rev="2.4.0" conf="*->default">
+      <exclude org="hsqldb" name="hsqldb" />
+      <exclude org="net.sf.kosmosfs" name="kfs" />
+      <exclude org="net.java.dev.jets3t" name="jets3t" />
+      <exclude org="org.eclipse.jdt" name="core" />
+      <exclude org="org.mortbay.jetty" name="jsp-*" />
+      <exclude org="ant" name="ant" />
+    </dependency>
+    <dependency org="junit" name="junit" rev="4.11" conf="test->default" />
   </dependencies>
   
 </ivy-module>

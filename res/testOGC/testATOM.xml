@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:georss="http://www.georss.org/georss"
+    xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0" xml:lang="es"
+    xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0"
+    xsi:schemaLocation="http://www.w3.org/2005/Atom http://inspire-geoportal.ec.europa.eu/schemas/inspire/atom/1.0/atom.xsd http://inspire.ec.europa.eu/schemas/inspire_dls/1.0 http://inspire.ec.europa.eu/schemas/inspire_dls/1.0/inspire_dls.xsd http://inspire.ec.europa.eu/schemas/common/1.0 http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd"
+    xmlns="http://www.w3.org/2005/Atom">
+    
+    <title>Servicio de descarga ATOM del MAGRAMA</title>
+    <subtitle></subtitle>
+    <link rel="self" type="application/atom+xml" hreflang="es"
+        href="http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/downloadservice.xml" title="Enlace a este mismo documento"/>
+    <link rel="describedby" hreflang="es" type="application/xml" href="http://idemarmpre.magrama.es/ide/inspire/metadata/downloadservice_md.xml" title="Enlace a los metadatos del servicio de descarga"/>
+    <link rel="search" type="application/opensearchdescription+xml"
+        href="http://idemarmpre.magrama.es/ide/inspire/opensearchdescription"
+        title="Buscar descargas MAGRAMA" hreflang="es" />
+    
+    <id>http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/downloadservice.xml</id>
+    <rights>Este servicio se puede usar de modo libre y gratuito en cualquier caso, siempre que se mencione al Ministerio de Agricultura, Alimentación y Medio Ambiente (MAGRAMA) como autor y propietario de la información.</rights>
+    <updated>2016-03-17T14:59:13+01:00</updated>
+    <author>
+        <name>Ministerio de Agricultura, Alimentacion y Medio Ambiente</name>
+        <uri>http://www.magrama.gob.es</uri>
+        <email>sig@magrama.es</email>
+    </author>
+    <entry>
+        <inspire_dls:spatial_dataset_identifier_code>Zonasdecalidaddelairedelainformacinhistricadelaevaluacin.xml</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>http://sig.magrama.es/Docs/inspire</inspire_dls:spatial_dataset_identifier_namespace>
+        <category term="EPSG:4258" scheme="http://www.opengis.net/def/crs/EPSG/0/4258" label="Coordenadas Elipsoidales ETRS89 IDEE"/>
+        <id>http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/Zonasdecalidaddelairedelainformacinhistricadelaevaluacin.xml::cVtY966+IS1/SoJSDQrpvA==</id>
+        <link rel="alternate" type="application/atom+xml" hreflang="es"
+            title="Zonas de calidad del aire de la información histórica de la evaluación"
+            href="http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/Zonasdecalidaddelairedelainformacinhistricadelaevaluacin.xml"/>
+        <link rel="describedby" type="application/xml" href="http://magrama.gob.es/ide/metadatos/srv/spa/xml.metadata.get?uuid=1e2524c9-8c46-43a2-86f0-22c463762f77"
+            title="Metadatos" hreflang="es"/>
+        <published>2012-05-29T00:00:00Z</published>
+        
+        <summary type="html" xml:lang="es">
+          <![CDATA[
+          <div class="thumbnail" style="float:left;">
+            <img src="http://magrama.gob.es/ide/metadatos/srv/spa/resources.get?id=8618&fname=ESMAGRAMAEVAL20121001001_vInspire_s.png&access=public"></img>
+          </div>
+          <div class="info" style="float:left; padding-left:10px">
+            <div class="dsdescription">
+              <p>
+                Información de la evolución de la calidad del aire de España desde  el año 2001 hasta la última evaluación oficial generadas en respuesta a la Directiva 2088/50/CE y RD 102/2011 relativo a la mejora de la calidad del aire.&#10;&#9;&#9;&#9;&#9;&#9;Dicha información está basada en datos oficiales y se divide por contaminante y valor legislado: SO2 (valor límite horario y diario), NO2 (valor límite anual y horario), PM10 (valor límite diario y anual), Pb, C6H6, CO y PM2,5 (valor límite anual), O3, As, Cd, Ni y B(a)P (valor objetivo).&#10;&#9;&#9;&#9;&#9;&#9;La información histórica se presenta a dos niveles:&#10;&#9;&#9;&#9;&#9;&#9;· Estaciones de calidad del aire, donde están los estadísticos de legislación de cada estación.&#10;&#9;&#9;&#9;&#9;&#9;· Zonas de calidad del aire, mostrándose la situación de cada zona respecto a los valores legislados. Hay que tener en cuenta que la situación de la peor estación es la que determina la clasificación de la zona respecto a los valores legislados.
+              </p>
+            </div>
+          
+            <div class="availableinfo">
+              <p>
+                <h4 >Información disponible:</h4>
+                <ul class="operationlist">
+                  <li><a href="http://www.magrama.gob.es/ide/metadatos/index.html?srv=metadata.show&uuid=1e2524c9-8c46-43a2-86f0-22c463762f77">Consultar el metadato del conjunto de datos</a></li>
+                  <li><a href="http://magrama.gob.es/ide/metadatos/srv/spa/xml.metadata.get?uuid=1e2524c9-8c46-43a2-86f0-22c463762f77">Descargar el metadato del conjunto de datos en XML</a></li>
+                  <li>Escalas:  1:25000</li>
+                  <li>Actualizado: enero de 2014 </li>
+                  <li>Descargar el conjunto de datos en los formatos y variantes siguientes:</li>
+                    <ul class="partlist">
+                      <li><strong></strong> <a href="http://www.magrama.gob.es/es/cartografia-y-sig/ide/descargas/calidad-y-evaluacion-ambiental/evaluacion_tcm7-365946.zip">Shapefile comprimido en ZIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>   
+            </div>
+          </div>
+          <div style="clear:both;">
+        
+          ]]>
+        </summary>
+        <title>Zonas de calidad del aire de la información histórica de la evaluación</title>
+        <updated>2014-01-01T14:25:00+01:00</updated>
+        <!-- WGS84 -->
+        <georss:polygon>26.840000 5.000000 26.840000 -19.000000 44.000000 -19.000000 44.000000 5.000000 26.840000 5.000000</georss:polygon>
+        
+    </entry>
+    <entry>
+        <inspire_dls:spatial_dataset_identifier_code>Estacionesparalaevaluacindecalidaddelaire.xml</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>http://sig.magrama.es/Docs/inspire</inspire_dls:spatial_dataset_identifier_namespace>
+        <category term="EPSG:4258" scheme="http://www.opengis.net/def/crs/EPSG/0/4258" label="Coordenadas Elipsoidales ETRS89 IDEE"/>
+        <id>http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/Estacionesparalaevaluacindecalidaddelaire.xml::/oR+HGUmD+auJ6ssACWM9Q==</id>
+        <link rel="alternate" type="application/atom+xml" hreflang="es"
+            title="Estaciones para la evaluación de calidad del aire"
+            href="http://idemarmpre.magrama.es/ide/inspire/atom/CategCalidadEvalAmbiental/Estacionesparalaevaluacindecalidaddelaire.xml"/>
+        <link rel="describedby" type="application/xml" href="http://magrama.gob.es/ide/metadatos/srv/spa/xml.metadata.get?uuid=d45a691e-8c41-424f-a785-2b5b7826e6ea"
+            title="Metadatos" hreflang="es"/>
+        <published>2012-05-29T00:00:00Z</published>
+        
+        <summary type="html" xml:lang="es">
+          <![CDATA[
+          <div class="thumbnail" style="float:left;">
+            <img src="http://magrama.gob.es/ide/metadatos/srv/spa/resources.get?id=8617&fname=ESMAGRAMAEST20121001001_vInspire_s.png&access=public"></img>
+          </div>
+          <div class="info" style="float:left; padding-left:10px">
+            <div class="dsdescription">
+              <p>
+                Información de la evolución de la calidad del aire de España desde  el año 2001 hasta la última evaluación oficial de estaciones fijas que se han utitlizado para realizar la evaluación de acuerdo con la Directiva 2088/50/CE y RD 102/2011 relativo a la mejora de la calidad del aire.&#10;&#9;&#9;&#9;&#9;&#9;Dicha información está basada en datos oficiales y se divide por contaminante y valor legislado: SO2 (valor límite horario y diario), NO2 (valor límite anual y horario), PM10 (valor límite diario y anual), Pb, C6H6, CO y PM2,5 (valor límite anual), O3, As, Cd, Ni y B(a)P (valor objetivo).&#10;&#9;&#9;&#9;&#9;&#9;La información histórica se presenta a dos niveles:&#10;&#9;&#9;&#9;&#9;&#9;· Estaciones de calidad del aire, donde están los estadísticos de legislación de cada estación.&#10;&#9;&#9;&#9;&#9;&#9;· Zonas de calidad del aire, mostrándose la situación de cada zona respecto a los valores legislados. Hay que tener en cuenta que la situación de la peor estación es la que determina la clasificación de la zona respecto a los valores legislados.
+              </p>
+            </div>
+          
+            <div class="availableinfo">
+              <p>
+                <h4 >Información disponible:</h4>
+                <ul class="operationlist">
+                  <li><a href="http://www.magrama.gob.es/ide/metadatos/index.html?srv=metadata.show&uuid=d45a691e-8c41-424f-a785-2b5b7826e6ea">Consultar el metadato del conjunto de datos</a></li>
+                  <li><a href="http://magrama.gob.es/ide/metadatos/srv/spa/xml.metadata.get?uuid=d45a691e-8c41-424f-a785-2b5b7826e6ea">Descargar el metadato del conjunto de datos en XML</a></li>
+                  <li>Escalas:  1:25000</li>
+                  <li>Actualizado: enero de 2014 </li>
+                  <li>Descargar el conjunto de datos en los formatos y variantes siguientes:</li>
+                    <ul class="partlist">
+                      <li><strong></strong> <a href="http://www.magrama.gob.es/es/cartografia-y-sig/ide/descargas/calidad-y-evaluacion-ambiental/estaciones_tcm7-356347.zip">Shapefile comprimido en ZIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>   
+            </div>
+          </div>
+          <div style="clear:both;">
+        
+          ]]>
+        </summary>
+        <title>Estaciones para la evaluación de calidad del aire</title>
+        <updated>2014-01-01T14:25:00+01:00</updated>
+        <!-- WGS84 -->
+        <georss:polygon>26.840000 5.000000 26.840000 -19.000000 44.000000 -19.000000 44.000000 5.000000 26.840000 5.000000</georss:polygon>
+        
+    </entry>
+</feed>

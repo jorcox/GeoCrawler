@@ -10,3 +10,6 @@ build/*
 /logs/
 /hadoop.log
 /hadoop.log.2016-03-15
+/101Crawlers/
+/runtime/
+/.naivebayes-model.crc
