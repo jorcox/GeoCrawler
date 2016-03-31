@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="parse-ogc" 
+        name="Nutch OGC Parser" 
+        version="1.0.0" 
+        provider-name="Unizar">
+
+   	<runtime>
+      	<library name="parse-ogc.jar">
+         	<export name="*"/>
+      	</library>
+   	</runtime>
+
+   	<requires>
+      	<import plugin="nutch-extensionpoints"/>
+   	</requires>
+
+   	<extension id="org.unizar.nutch.parse.ogc" 
+   	           name="Nutch OGC Parse Filter"
+   	           point="org.apache.nutch.parse.HtmlParseFilter">
+   	           
+      	<implementation id="org.unizar.nutch.parse.ogc.OGCParseFilter" 
+                        class="org.unizar.nutch.parse.ogc.OGCParseFilter" >
+        
+        	<parameter name="contentType" value="text/xml|application/xml"/>
+        </implementation>
+   	</extension>
+
+</plugin>

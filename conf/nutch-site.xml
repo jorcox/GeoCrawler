@@ -17,7 +17,20 @@
 
 <property>
    <name>plugin.folders</name>
-   <value>/home/jorge/Escritorio/trunk/build/plugins</value>
+   <value>/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/repo/build/plugins</value>
  </property>
+ 
+ <property>
+  <name>plugin.includes</name>
+  <value>protocol-http|urlfilter-regex|parse-(tika|html|ogc)|index-(basic|anchor|length)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable 
+  protocol-httpclient, but be aware of possible intermittent problems with the 
+  underlying commons-httpclient library. Set parsefilter-naivebayes for classification based focused crawler.
+  </description>
+</property>
 
 </configuration>

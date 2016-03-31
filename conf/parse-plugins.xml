@@ -67,7 +67,7 @@
 		<plugin id="parse-tika" />
 		<plugin id="feed" />
 	</mimeType>
-
+	
        <!-- Types for parse-ext plugin: required for unit tests to pass. -->
 
 	<mimeType name="application/vnd.nutch.example.cat">
@@ -83,6 +83,8 @@
 	<aliases>
 		<alias name="parse-tika" 
 			extension-id="org.apache.nutch.parse.tika.TikaParser" />
+		<alias name="parse-xml" 
+			extension-id="org.apache.nutch.parse.xml.XMLParser" />	
 		<alias name="parse-ext" extension-id="ExtParser" />
 		<alias name="parse-html"
 			extension-id="org.apache.nutch.parse.html.HtmlParser" />

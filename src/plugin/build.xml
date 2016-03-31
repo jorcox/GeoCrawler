@@ -87,6 +87,10 @@
      <ant dir="urlnormalizer-querystring" target="deploy"/>
      <ant dir="urlnormalizer-regex" target="deploy"/>
      <ant dir="urlnormalizer-slash" target="deploy"/>
+
+     <!-- Plugin propio -->
+     <ant dir="index-length" target="deploy"/>
+     <ant dir="parse-ogc" target="deploy"/>
   </target>
 
   <!-- ====================================================== -->
@@ -132,6 +136,9 @@
      <ant dir="urlnormalizer-querystring" target="test"/>
      <ant dir="urlnormalizer-regex" target="test"/>
      <ant dir="urlnormalizer-slash" target="test"/>
+     <!-- Plugin propio -->
+     <ant dir="index-length" target="test"/>
+     <ant dir="parse-ogc" target="test"/>
     </parallel>
   </target>
 
@@ -202,5 +209,8 @@
     <ant dir="urlnormalizer-querystring" target="clean"/>
     <ant dir="urlnormalizer-regex" target="clean"/>
     <ant dir="urlnormalizer-slash" target="clean"/>
+     <!-- Plugin propio -->
+     <ant dir="index-length" target="clean"/>
+     <ant dir="parse-ogc" target="clean"/>
   </target>
 </project>

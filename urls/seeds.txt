@@ -1,1 +1,1 @@
-https://elespanol.com
+http://wms.magrama.es/sig/Agricultura/FactorR/wms.aspx?request=GetCapabilities&service=WMS
