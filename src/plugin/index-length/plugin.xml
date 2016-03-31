@@ -16,27 +16,27 @@
  limitations under the License.
 -->
 <plugin
-   id="index-length"
-   name="Length Indexing Filter"
-   version="1.0.0"
-   provider-name="nutch.org">
+        id="index-length"
+        name="Length Indexing Filter"
+        version="1.0.0"
+        provider-name="nutch.org">
 
 
-   <runtime>
-      <library name="index-length.jar">
-         <export name="*"/>
-      </library>
-   </runtime>
+    <runtime>
+        <library name="index-length.jar">
+            <export name="*"/>
+        </library>
+    </runtime>
 
-   <requires>
-      <import plugin="nutch-extensionpoints"/>
-   </requires>
+    <requires>
+        <import plugin="nutch-extensionpoints"/>
+    </requires>
 
-   <extension id="org.apache.nutch.indexer.length"
-              name="Nutch Length Indexing Filter"
-              point="org.apache.nutch.indexer.IndexingFilter">
-      <implementation id="LengthIndexingFilter"
-                      class="org.apache.nutch.indexer.length.LengthIndexingFilter"/>
-   </extension>
+    <extension id="org.apache.nutch.indexer.length"
+               name="Nutch Length Indexing Filter"
+               point="org.apache.nutch.indexer.IndexingFilter">
+        <implementation id="LengthIndexingFilter"
+                        class="org.apache.nutch.indexer.length.LengthIndexingFilter"/>
+    </extension>
 
 </plugin>

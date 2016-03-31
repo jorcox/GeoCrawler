@@ -1,11 +1,5 @@
 package org.unizar.nutch.parse.ogc;
 
-import static org.junit.Assert.*;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.nutch.metadata.Metadata;
 import org.apache.nutch.parse.Parse;
@@ -15,12 +9,19 @@ import org.apache.nutch.parse.ParseResult;
 import org.apache.nutch.protocol.Content;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.util.Scanner;
+
+import static org.junit.Assert.assertEquals;
+
 public class OgcParseFilterTest {
 
 	@Test
-	public void testWMS() throws FileNotFoundException {
-		// Preparacion
-		File f = new File("res/testOGC/testWMS.xml");
+	public void testWMS() throws FileNotFoundException, URISyntaxException {
+		// Preparaci
+		File f = new File(getClass().getResource("testWMS.xml").toURI());
 		String contentValue = new Scanner(f).useDelimiter("\\Z").next();
 		String url = "http://wms.magrama.es/sig/Agricultura/TurcSecano/wms.aspx?request=GetCapabilities&service=WMS";
 		ParseResult testParseResult = createParseResultWithMetadata(new Metadata(), url);
@@ -39,9 +40,9 @@ public class OgcParseFilterTest {
 	}
 	
 	@Test
-	public void testATOM() throws FileNotFoundException {
+	public void testATOM() throws FileNotFoundException, URISyntaxException {
 		// Preparacion
-		File f = new File("res/testOGC/testATOM.xml");
+		File f = new File(getClass().getResource("testATOM.xml").toURI());
 		String contentValue = new Scanner(f).useDelimiter("\\Z").next();
 		String url = "http://www.magrama.gob.es/ide/inspire/atom/CategCalidadEvalAmbiental/downloadservice.xml";
 		ParseResult testParseResult = createParseResultWithMetadata(new Metadata(), url);
@@ -87,14 +88,4 @@ public class OgcParseFilterTest {
 		Content cont = new Content(url, "", contentByteArray, null, new Metadata(), new Configuration());
 		return cont;
 	}
-	
-	public static void main(String[] args) {
-		try {
-			new OgcParseFilterTest().testATOM();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 }
