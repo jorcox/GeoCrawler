@@ -26,6 +26,8 @@ import org.w3c.dom.DocumentFragment;
  * Parse the content from XML in order to check if it corresponds to an OGC
  * service. In addition, makes full raw content of XML (and HTML) documents
  * available.
+ * 
+ * @author Jorge Cancer
  */
 public class OgcParseFilter implements HtmlParseFilter {
 
@@ -77,7 +79,7 @@ public class OgcParseFilter implements HtmlParseFilter {
 					.getEmptyParseResult(content.getUrl(), getConf());
 		}
 
-		// TODO Mejora de la detecion de outlinks
+		// TODO Possible improve 
 		Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
 
 		return parseResult;

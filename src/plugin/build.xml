@@ -91,6 +91,7 @@
         <!-- Plugin propio -->
         <ant dir="index-length" target="deploy"/>
         <ant dir="parse-ogc" target="deploy"/>
+	<ant dir="lib-log4j" target="deploy"/>
     </target>
 
     <!-- ====================================================== -->
