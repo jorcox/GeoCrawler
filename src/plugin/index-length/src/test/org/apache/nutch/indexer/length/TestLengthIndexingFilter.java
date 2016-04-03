@@ -15,29 +15,29 @@ import org.junit.Test;
 
 public class TestLengthIndexingFilter {
 
-    private IndexingFilter filter;
-    private String text;
-    private NutchDocument nutchDocument;
-    private Parse parse;
-    private Text urlText;
-    private CrawlDatum datum;
-    private Inlinks inlinks;
+	private IndexingFilter filter;
+	private String text;
+	private NutchDocument nutchDocument;
+	private Parse parse;
+	private Text urlText;
+	private CrawlDatum datum;
+	private Inlinks inlinks;
 
-    @Before
-    public void setup() {
-        filter = new LengthIndexingFilter();
-        filter.setConf(NutchConfiguration.create());
-        text = "Hola que tal";
-        nutchDocument = new NutchDocument();
-        parse = new ParseImpl(text, new ParseData());
-        urlText = new Text("http://nutch.apache.org/index.html");
-        datum = new CrawlDatum();
-        inlinks = new Inlinks();
-    }
+	@Before
+	public void setup() {
+		filter = new LengthIndexingFilter();
+		filter.setConf(NutchConfiguration.create());
+		text = "Hola que tal";
+		nutchDocument = new NutchDocument();
+		parse = new ParseImpl(text, new ParseData());
+		urlText = new Text("http://nutch.apache.org/index.html");
+		datum = new CrawlDatum();
+		inlinks = new Inlinks();
+	}
 
 	@Test
 	public void test() throws Exception {
-		NutchDocument doc = filter.filter(nutchDocument, parse, urlText, datum,  inlinks);
+		NutchDocument doc = filter.filter(nutchDocument, parse, urlText, datum, inlinks);
 
 		Assert.assertTrue("Comprobación de que el campo esta indexado", doc.getFieldNames().contains("length"));
 		Assert.assertEquals("Comprobar si se realiza bien la medicion", text.length(),
