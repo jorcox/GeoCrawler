@@ -42,9 +42,7 @@ public class OgcIndexingFilter implements IndexingFilter {
 		ParseData dataP = parse.getData();
 		Metadata meta = dataP.getParseMeta();
 
-		String[] fields = meta.names();
-		for (int i = 0; i < fields.length; i++) {			
-			String key = fields[i];
+		for (String key : meta.names()) {
 			String value = meta.get(key);
 			LOG.info("Adding " + key + " to NutchDocument");
 			doc.add(key, value);
