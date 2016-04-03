@@ -37,10 +37,10 @@ public class TestLengthIndexingFilter {
 
 	@Test
 	public void test() throws Exception {
-        filter.filter(nutchDocument, parse, urlText, datum,  inlinks);
+		NutchDocument doc = filter.filter(nutchDocument, parse, urlText, datum,  inlinks);
 
-		Assert.assertTrue("Comprobación de que el campo esta indexado", nutchDocument.getFieldNames().contains("length"));
+		Assert.assertTrue("Comprobación de que el campo esta indexado", doc.getFieldNames().contains("length"));
 		Assert.assertEquals("Comprobar si se realiza bien la medicion", text.length(),
-                nutchDocument.getField("length").getValues().get(0));
+				doc.getField("length").getValues().get(0));
 	}
 }

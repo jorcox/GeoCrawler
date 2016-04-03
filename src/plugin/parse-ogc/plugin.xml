@@ -18,8 +18,14 @@
 
 		<implementation id="org.unizar.nutch.parse.ogc.OgcParseFilter"
 			class="org.unizar.nutch.parse.ogc.OgcParseFilter">
-
 			<parameter name="contentType" value="text/xml|application/xml" />
+		</implementation>
+	</extension>
+
+	<extension id="org.unizar.nutch.indexer.ogc" name="Nutch OGC Indexing Filter"
+		point="org.apache.nutch.indexer.IndexingFilter">
+		<implementation id="org.unizar.nutch.indexer.ogc.OgcIndexingFilter"
+			class="org.unizar.nutch.indexer.ogc.OgcIndexingFilter">
 		</implementation>
 	</extension>
 

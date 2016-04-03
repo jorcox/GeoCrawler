@@ -72,14 +72,6 @@ public class OgcParseFilterTest {
 		return testParseResult;
 	}
 
-	private ParseResult createMockParseResult() {
-		return createParseResultWithMetadata(new Metadata(), null);
-	}
-
-	private Content createContent(final String url) {
-		return createContent(url, null);
-	}
-
 	private Content createContent(final String url, final String content) {
 		byte[] contentByteArray = {};
 		if (content != null) {
