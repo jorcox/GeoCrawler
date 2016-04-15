@@ -13,3 +13,4 @@ build/*
 /101Crawlers/
 /runtime/
 /.naivebayes-model.crc
+/.settings/

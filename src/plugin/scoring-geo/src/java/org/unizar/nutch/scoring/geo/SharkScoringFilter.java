@@ -1,11 +1,20 @@
 package org.unizar.nutch.scoring.geo;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map.Entry;
 
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.Text;
+import org.apache.nutch.crawl.CrawlDatum;
+import org.apache.nutch.crawl.Inlinks;
+import org.apache.nutch.indexer.NutchDocument;
+import org.apache.nutch.metadata.Nutch;
+import org.apache.nutch.parse.Parse;
+import org.apache.nutch.parse.ParseData;
+import org.apache.nutch.protocol.Content;
+import org.apache.nutch.scoring.ScoringFilter;
+import org.apache.nutch.scoring.ScoringFilterException;
 // Slf4j Logging imports
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,20 +22,6 @@ import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
 import org.unizar.nutch.scoring.term.TermFreq;
 
 import uk.ac.shef.dcs.oak.jate.model.Term;
-
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.Writable;
-import org.apache.nutch.crawl.CrawlDatum;
-import org.apache.nutch.crawl.Inlinks;
-import org.apache.nutch.indexer.NutchDocument;
-import org.apache.nutch.metadata.Nutch;
-import org.apache.nutch.parse.Outlink;
-import org.apache.nutch.parse.Parse;
-import org.apache.nutch.parse.ParseData;
-import org.apache.nutch.protocol.Content;
-import org.apache.nutch.scoring.ScoringFilter;
-import org.apache.nutch.scoring.ScoringFilterException;
 
 /**
  * This plugin implements the shark-search algorithm
@@ -200,10 +195,10 @@ public class SharkScoringFilter implements ScoringFilter {
 		// TODO Enviar al tesauro
 		float rel = 0.0f;
 		for (Term term : terms) {
-			//if (term.getConfidence() > 1) {
-				int pow = Thesaurus.execQuery(term.getConcept());
-				rel += term.getConfidence() * pow;
-			//}
+			// if (term.getConfidence() > 1) {
+			int pow = Thesaurus.execQuery(term.getConcept());
+			rel += term.getConfidence() * pow;
+			// }
 		}
 		return rel;
 	}
