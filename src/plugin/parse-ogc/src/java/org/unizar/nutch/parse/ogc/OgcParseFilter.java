@@ -1,9 +1,13 @@
 package org.unizar.nutch.parse.ogc;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.MapWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.nutch.metadata.Metadata;
 import org.apache.nutch.parse.HTMLMetaTags;
 import org.apache.nutch.parse.HtmlParseFilter;
+import org.apache.nutch.parse.Outlink;
+import org.apache.nutch.parse.ParseData;
 import org.apache.nutch.parse.ParseResult;
 import org.apache.nutch.parse.ParseStatus;
 import org.apache.nutch.parse.xml.XMLUtils;
@@ -36,8 +40,14 @@ public class OgcParseFilter implements HtmlParseFilter {
     private final static String OGC_SERVICE = "ogc_service";
 
     private final static String OGC_VERSION = "ogc_version";
+    
+    private final static String ANCHOR_CONTEXT = "anchor_context";
+    
+    private final static String ANCHOR = "anchor";
 
     private static final Logger LOG = LoggerFactory.getLogger(OgcParseFilter.class);
+    
+    private int boundary;
 
     private Configuration conf;
 
@@ -61,37 +71,89 @@ public class OgcParseFilter implements HtmlParseFilter {
 	@Override
 	public void setConf(Configuration conf) {
 		this.conf = conf;
+		boundary = conf.getInt("ogc.outlink.anchor.context", 30);
 	}
 
 	@Override
 	public ParseResult filter(Content content, ParseResult parseResult, HTMLMetaTags metaTags, DocumentFragment doc) {
 
 		String url = content.getUrl();
-		LOG.info("Getting rawxml content for " + url);
+		
+		LOG.info("Getting ogc content for " + url);
 
 		Metadata metadata = parseResult.get(url).getData().getParseMeta();
-
-		//Metadata metadata = new Metadata();
+		
+		ParseData parseData = parseResult.get(url).getData();
+		
 
 		byte[] raw = content.getContent();
+		
+		// Text with HTML tags
+		String h = new String(raw);
+		
+		// Text without HTML tags
+		String he = parseResult.get(url).getText();
+		
+		Outlink[] outLinks = parseData.getOutlinks();
+		
 
-		metadata.add(RAW_CONTENT, new String(raw));
-
-		Document dom = XMLUtils.parseXml(new ByteArrayInputStream(raw));
-
-		nsc = dom.getRootElement().getNamespace();
-
-		try {
-			detectOGC(dom, metadata);
-		} catch (JaxenException e) {
-			return new ParseStatus(ParseStatus.FAILED, "XML Parser Jaxen error : " + e.getMessage())
-					.getEmptyParseResult(content.getUrl(), getConf());
+		// For each link read anchor and and around text with a boundary definded in conf
+		for (Outlink outlink : outLinks) {
+			String anchor = outlink.getAnchor();
+			if(!anchor.equals("")){
+				int index = he.indexOf(anchor);  		// Anchor's index (Search around)
+				MapWritable metadataOutlink = new MapWritable();
+				String context = extractContext(he, index);
+				metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(context));
+				metadataOutlink.put(new Text(ANCHOR), new Text(anchor));
+				outlink.setMetadata(metadataOutlink);
+			} else{
+				// TODO ¿What if the outlink doesn't have anchor?
+			}			
 		}
-
-		// TODO Possible improve 
-		// Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
+		
+		// Save changes in parse data
+		parseData.setOutlinks(outLinks);
+		
+		// If the content is xml check if it's an ogc service		
+		String contentType = content.getContentType();		
+		if(contentType.equals("application/xml") || contentType.equals("text/xml")){
+				
+			metadata.add(RAW_CONTENT, new String(raw));
+	
+			Document dom = XMLUtils.parseXml(new ByteArrayInputStream(raw));
+	
+			nsc = dom.getRootElement().getNamespace();
+	
+			try {
+				detectOGC(dom, metadata);
+			} catch (JaxenException e) {
+				return new ParseStatus(ParseStatus.FAILED, "XML Parser Jaxen error : " + e.getMessage())
+						.getEmptyParseResult(content.getUrl(), getConf());
+			}
+		}
+	
+			// TODO Possible improve 
+			// Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
 
 		return parseResult;
+	}
+
+	private String extractContext(String he, int index) {
+		String res = "";
+		try{
+			res = he.substring(index-boundary, index+boundary);
+		} catch (IndexOutOfBoundsException e){
+			if(index-boundary < 0 && index+boundary > he.length() ) {
+				res = he.substring(0, he.length());
+			} else if(index+boundary > he.length()){
+				// index + boundary is larger than string length
+				res = he.substring(index-boundary, he.length());
+			} else if(index-boundary < 0) {
+				res = he.substring(0, he.length());
+			}
+		}		
+		return res;
 	}
 
 	private void detectOGC(Document dom, Metadata metadata) throws JaxenException {

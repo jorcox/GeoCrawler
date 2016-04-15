@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="scoring-geo"
+   name="Scoring plugin for geo crawling."
+   version="1.0.0"
+   provider-name="unizar">
+
+   <runtime>
+      <library name="scoring-geo.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>      
+      <!-- <import plugin="lib"/> -->
+   </requires>
+
+   <extension id="org.unizar.nutch.scoring.geo"
+              name="Geo Scoring Filter"
+              point="org.apache.nutch.scoring.ScoringFilter">
+      <implementation id="GeoScoringFilter"
+                      class="org.unizar.nutch.scoring.geo.SharkScoringFilter"/>
+   </extension>
+</plugin>

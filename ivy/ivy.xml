@@ -121,6 +121,15 @@
     	<dependency org="de.agilecoders.wicket" name="wicket-bootstrap-core" rev="0.9.2" conf="*->default" />
     	<dependency org="de.agilecoders.wicket" name="wicket-bootstrap-extensions" rev="0.9.2" conf="*->default" />
 
+
+		<!-- RDF dependencies -->
+		<dependency org="org.apache.jena" name="jena-core" rev="3.0.1"/>
+		<dependency org="org.apache.jena" name="jena-arq" rev="3.0.1"/>
+
+
+
+
+
 		<!--global exclusion -->
 		<exclude module="jmxtools" />
 		<exclude module="jms" />

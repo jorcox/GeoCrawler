@@ -22,7 +22,7 @@
 
     <property>
         <name>plugin.includes</name>
-        <value>protocol-http|urlfilter-regex|parse-(tika|html|ogc)|index-(basic|anchor|length)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)
+        <value>protocol-http|urlfilter-regex|parse-(tika|html|ogc)|index-(basic|anchor|length)|indexer-solr|scoring-geo|urlnormalizer-(pass|regex|basic)
         </value>
         <description>Regular expression naming plugin directory names to
             include. Any plugin not matching this expression is excluded.
@@ -34,5 +34,30 @@
             based focused crawler.
         </description>
     </property>
+    
+    <property>
+        <name>ogc.outlink.anchor.context</name>
+        <value>30</value>
+        <description>Boundary</description>
+    </property>
+    
+    <property>
+        <name>score.geo.beta</name>
+        <value>0.5</value>
+        <description>Beta</description>
+    </property>
+    
+    <property>
+        <name>score.geo.delta</name>
+        <value>0.5</value>
+        <description>Delta</description>
+    </property>
+    
+    <property>
+        <name>score.geo.gamma</name>
+        <value>0.5</value>
+        <description>Gamma</description>
+    </property>
+    
 
 </configuration>

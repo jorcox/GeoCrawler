@@ -1,1 +1,1 @@
-http://wms.magrama.es/sig/Agricultura/TurcSecano/wms.aspx?request=GetCapabilities&service=WMS
+http://www.elespanol.com/

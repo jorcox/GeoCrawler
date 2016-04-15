@@ -1099,8 +1099,12 @@
         <source path="${plugins.dir}/urlnormalizer-slash/src/java/" />
         <source path="${plugins.dir}/urlnormalizer-slash/src/test/" />
 
-          <source path="${plugins.dir}/index-length/src/java/" />
-          <source path="${plugins.dir}/index-length/src/test/" />
+        <source path="${plugins.dir}/index-length/src/java/" />
+        <source path="${plugins.dir}/index-length/src/test/" />
+        <source path="${plugins.dir}/parse-ogc/src/java/" />
+        <source path="${plugins.dir}/parse-ogc/src/test/" />
+        <source path="${plugins.dir}/scoring-geo/src/java/" />
+        <source path="${plugins.dir}/scoring-geo/src/test/" />
 
 
         <output path="${build.classes}" />

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="scoring-geo" default="jar-core">
+  <import file="../build-plugin.xml"/>
+
+  <path id="plugin.deps">
+		<fileset dir="${nutch.root}/build">
+			<include name="lib/JateLib.jar" />
+			<include name="lib/wit-commons.jar" />
+			<include name="lib/dragontool.jar" />
+			<include name="lib/jena-arq-3.0.1.jar" />
+		</fileset>
+	</path>
+
+</project>
