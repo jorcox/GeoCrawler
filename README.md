@@ -1,4 +1,4 @@
-101Crawlers README
+GeoCrawler README
 ===================
 
 <img src="http://nutch.apache.org/assets/img/nutch_logo_tm.png" align="right" width="300" />
