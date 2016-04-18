@@ -1,5 +1,10 @@
 package org.unizar.nutch.indexer.ogc;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.util.Scanner;
+
 import org.apache.hadoop.io.Text;
 import org.apache.nutch.crawl.CrawlDatum;
 import org.apache.nutch.crawl.Inlinks;
@@ -17,17 +22,13 @@ import org.junit.Test;
 import org.unizar.nutch.parse.ogc.OgcParseFilter;
 import org.unizar.nutch.test.utils.Utils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
-import java.util.Scanner;
-
 public class OgcIndexingFilterTest {
 
 	private NutchDocument nutchDocument;
 	private Parse parse;
 	private Text urlText;
-	private CrawlDatum datum;private Inlinks inlinks;
+	private CrawlDatum datum;
+	private Inlinks inlinks;
 	private String url;
 
 	@Before
@@ -45,6 +46,7 @@ public class OgcIndexingFilterTest {
 	@Test
 	public void testOgcIndexingFilter() throws FileNotFoundException, URISyntaxException, IndexingException {
 		File f = new File(getClass().getResource("testWMS.xml").toURI());
+		@SuppressWarnings("resource")
 		String contentValue = new Scanner(f).useDelimiter("\\Z").next();
 		ParseResult testParseResult = Utils.createParseResultWithMetadata(new Metadata(), url);
 		Content testContent = Utils.createContent(url, contentValue);

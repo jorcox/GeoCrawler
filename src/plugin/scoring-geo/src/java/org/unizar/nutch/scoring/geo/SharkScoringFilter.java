@@ -50,6 +50,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float internalScoreFactor;
 	private float externalScoreFactor;
 	private boolean countFiltered;
+	private Thesaurus th;
 
 	public Configuration getConf() {
 		return conf;
@@ -60,6 +61,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		delta = conf.getFloat("score.geo.delta", 0.5f);
 		beta = conf.getFloat("score.geo.beta", 0.5f);
 		gamma = conf.getFloat("score.geo.gamma", 0.5f);
+		th = new Thesaurus();
 		/*
 		 * scorePower = conf.getFloat("indexer.score.power", 0.5f);
 		 * internalScoreFactor = conf.getFloat("db.score.link.internal", 1.0f);
@@ -183,7 +185,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		String[] words = text.split(" ");
 		float rel = 0.0f;
 		for (String word : words) {
-			int pow = Thesaurus.execQuery(word);
+			int pow = th.execQuery(word);
 			rel += pow;
 		}
 		return rel;
@@ -192,11 +194,10 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float relevance(ParseData parseData) {
 		String content = parseData.getContentMeta().get(TEXT);
 		Term[] terms = TermFreq.getTerms(content);
-		// TODO Enviar al tesauro
 		float rel = 0.0f;
 		for (Term term : terms) {
 			// if (term.getConfidence() > 1) {
-			int pow = Thesaurus.execQuery(term.getConcept());
+			int pow = th.execQuery(term.getConcept());
 			rel += term.getConfidence() * pow;
 			// }
 		}
