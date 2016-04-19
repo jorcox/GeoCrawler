@@ -1,7 +1,5 @@
 package org.unizar.nutch.scoring.term;
 
-import java.io.IOException;
-
 import uk.ac.shef.dcs.oak.jate.JATEException;
 import uk.ac.shef.dcs.oak.jate.core.algorithm.TFIDFFeatureWrapper;
 import uk.ac.shef.dcs.oak.jate.core.feature.FeatureBuilderCorpusTermFrequency;
@@ -16,6 +14,8 @@ import uk.ac.shef.dcs.oak.jate.util.control.Lemmatizer;
 import uk.ac.shef.dcs.oak.jate.util.control.StopList;
 import uk.ac.shef.dcs.oak.jate.util.counter.TermFreqCounter;
 import uk.ac.shef.dcs.oak.jate.util.counter.WordCounter;
+
+import java.io.IOException;
 
 /**
  * @author Jorge Cancer
@@ -51,9 +51,8 @@ public class TermFreq {
 
 		// Term[] terms = new TFIDFAlgorithm().execute(new
 		// TFIDFFeatureWrapper(termCorpusFreq));
-		Term[] terms = new CustomAlgorithm().execute(new TFIDFFeatureWrapper(termCorpusFreq));
 
-		return terms;
+		return new CustomAlgorithm().execute(new TFIDFFeatureWrapper(termCorpusFreq));
 	}
 
 	public static void main(String[] args) {

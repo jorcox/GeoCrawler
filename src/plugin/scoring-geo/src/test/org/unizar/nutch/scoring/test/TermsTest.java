@@ -1,16 +1,17 @@
 package org.unizar.nutch.scoring.test;
 
-import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
-
 import org.apache.nutch.indexer.IndexingException;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
 import org.unizar.nutch.scoring.term.TermFreq;
 
 import uk.ac.shef.dcs.oak.jate.model.Term;
+
+import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+
+import static org.junit.Assert.fail;
 
 public class TermsTest {
 
@@ -83,7 +84,7 @@ public class TermsTest {
 	@Test
 	public void testTermExtractor() throws FileNotFoundException, URISyntaxException, IndexingException {
 		Term[] terms = TermFreq.getTerms(text);
-		Assert.assertEquals(1, 1);
+		fail();
 	}
 
 }

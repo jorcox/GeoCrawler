@@ -1,15 +1,14 @@
 package org.unizar.nutch.scoring.term;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 import uk.ac.shef.dcs.oak.jate.JATEException;
 import uk.ac.shef.dcs.oak.jate.core.algorithm.AbstractFeatureWrapper;
 import uk.ac.shef.dcs.oak.jate.core.algorithm.Algorithm;
-import uk.ac.shef.dcs.oak.jate.core.algorithm.AverageCorpusTFFeatureWrapper;
 import uk.ac.shef.dcs.oak.jate.core.algorithm.TFIDFFeatureWrapper;
 import uk.ac.shef.dcs.oak.jate.model.Term;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CustomAlgorithm implements Algorithm {
 
@@ -18,7 +17,7 @@ public class CustomAlgorithm implements Algorithm {
 		if (!(store instanceof TFIDFFeatureWrapper))
 			throw new JATEException("" + "Required: TFIDFFeatureWrapper");
 		TFIDFFeatureWrapper corpus = (TFIDFFeatureWrapper) store;
-		Set<Term> result = new HashSet<Term>();
+		Set<Term> result = new HashSet<>();
 
 		for (String s : corpus.getTerms()) {
 			/*
