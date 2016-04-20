@@ -1,5 +1,10 @@
 package org.unizar.nutch.scoring.geo;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.Text;
 import org.apache.nutch.crawl.CrawlDatum;
@@ -17,11 +22,6 @@ import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
 import org.unizar.nutch.scoring.term.TermFreq;
 
 import uk.ac.shef.dcs.oak.jate.model.Term;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 // Slf4j Logging imports
 
@@ -198,9 +198,10 @@ public class SharkScoringFilter implements ScoringFilter {
 		return rel;
 	}
 
-	/** Dampen the boost value by scorePower. */
+	@Override
 	public float indexerScore(Text url, NutchDocument doc, CrawlDatum dbDatum, CrawlDatum fetchDatum, Parse parse,
 			Inlinks inlinks, float initScore) throws ScoringFilterException {
-		return (float) Math.pow(dbDatum.getScore(), scorePower) * initScore;
+		return dbDatum.getScore();
 	}
+
 }
