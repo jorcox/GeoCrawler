@@ -64,7 +64,7 @@ public class Thesaurus {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Thesaurus th = new Thesaurus();
-		th.execQuery("Mar");
+		th.execQuery("Afrika");
 		/*
 		 * Model model1 = FileManager.get().loadModel("gemetThesaurus.rdf");
 		 * Model model2 = FileManager.get().loadModel("gemet-backbone.rdf");
