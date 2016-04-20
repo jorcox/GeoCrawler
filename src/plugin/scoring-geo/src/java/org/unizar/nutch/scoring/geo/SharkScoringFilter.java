@@ -50,7 +50,6 @@ public class SharkScoringFilter implements ScoringFilter {
 
 	private Configuration conf;
 	private float scoreInjected;
-	private float scorePower;
 	private Thesaurus th;
 
 	public Configuration getConf() {
@@ -63,12 +62,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		beta = conf.getFloat("score.geo.beta", 0.5f);
 		gamma = conf.getFloat("score.geo.gamma", 0.5f);
 		th = new Thesaurus();
-		/*
-		 * scorePower = conf.getFloat("indexer.score.power", 0.5f);
-		 * internalScoreFactor = conf.getFloat("db.score.link.internal", 1.0f);
-		 * externalScoreFactor = conf.getFloat("db.score.link.external", 1.0f);
-		 * countFiltered = conf.getBoolean("db.score.count.filtered", false);
-		 */
+		scoreInjected = 0.25f;
 	}
 
 	public void injectedScore(Text url, CrawlDatum datum) throws ScoringFilterException {
