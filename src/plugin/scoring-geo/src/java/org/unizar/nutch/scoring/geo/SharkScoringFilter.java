@@ -183,10 +183,8 @@ public class SharkScoringFilter implements ScoringFilter {
 		float rel = 0.0f;
 		if (terms != null) {
 			for (Term term : terms) {
-				// if (term.getConfidence() > 1) {
 				int pow = th.execQuery(term.getConcept());
 				rel += term.getConfidence() * pow;
-				// }
 			}
 		}
 		return rel;
