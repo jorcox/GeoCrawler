@@ -1,9 +1,5 @@
 package org.unizar.nutch.scoring.geo;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map.Entry;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.Text;
 import org.apache.nutch.crawl.CrawlDatum;
@@ -15,13 +11,19 @@ import org.apache.nutch.parse.ParseData;
 import org.apache.nutch.protocol.Content;
 import org.apache.nutch.scoring.ScoringFilter;
 import org.apache.nutch.scoring.ScoringFilterException;
-// Slf4j Logging imports
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
 import org.unizar.nutch.scoring.term.TermFreq;
 
 import uk.ac.shef.dcs.oak.jate.model.Term;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+// Slf4j Logging imports
 
 /**
  * This plugin implements the shark-search algorithm
@@ -33,8 +35,10 @@ public class SharkScoringFilter implements ScoringFilter {
 	private final static Logger LOG = LoggerFactory.getLogger(SharkScoringFilter.class);
 
 	private final static String ANCHOR_CONTEXT = "anchor_context";
+	private static final Text TEXT_ANCHOR_CONTEXT = new Text(ANCHOR_CONTEXT);
 
 	private final static String ANCHOR = "anchor";
+	private static final Text TEXT_ANCHOR = new Text(ANCHOR);
 
 	private final static String TEXT = "text";
 
@@ -119,8 +123,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	public void updateDbScore(Text url, CrawlDatum old, CrawlDatum datum, List<CrawlDatum> inlinked)
 			throws ScoringFilterException {
 		float adjust = 0.0f;
-		for (int i = 0; i < inlinked.size(); i++) {
-			CrawlDatum linked = inlinked.get(i);
+		for (CrawlDatum linked : inlinked) {
 			adjust += linked.getScore();
 		}
 		if (old == null)
@@ -134,7 +137,6 @@ public class SharkScoringFilter implements ScoringFilter {
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
 					throws ScoringFilterException {
-		float scoreChild = 0.0f;
 
 		/*
 		 * Get the inherited score
@@ -152,30 +154,23 @@ public class SharkScoringFilter implements ScoringFilter {
 		/*
 		 * Computing the inherited score of child node
 		 */
-		if (relevance(parseData) > 0) {
-			scoreChild = delta * relevance(parseData);
-		} else {
-			scoreChild = delta * inheritedScore;
-		}
+		float scoreChild = delta * (relevance(parseData) > 0 ? relevance(parseData) : inheritedScore);
 
 		for (Entry<Text, CrawlDatum> entry : targets) {
-			String anchor = entry.getValue().getMetaData().get(new Text(ANCHOR)).toString();
-			String context = entry.getValue().getMetaData().get(new Text(ANCHOR_CONTEXT)).toString();
-			float anchorScore = relevanceText(anchor);
-			float anchorContextScore = 0.0f;
-			float neighbourhoodScore = 0.0f;
-			float potentialScore = 0.0f;
-			if (anchorScore > 0) {
-				anchorContextScore = 1;
-			} else {
-				anchorContextScore = relevanceText(context);
-			}
-			neighbourhoodScore = (beta * anchorScore) + ((1 - beta) * anchorContextScore);
-			potentialScore = (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
-			// Saving the score
+			float potentialScore = computePotentialScore(scoreChild, entry.getValue().getMetaData());
 			entry.getValue().setScore(potentialScore);
 		}
 		return null;
+	}
+
+	private float computePotentialScore(float scoreChild, Map metadata) {
+		String anchor = metadata.get(TEXT_ANCHOR).toString();
+		String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
+		float anchorScore = relevanceText(anchor);
+		float anchorContextScore = anchorScore > 0 ? 1f : relevanceText(context);
+		float neighbourhoodScore = (beta * anchorScore) + ((1 - beta) * anchorContextScore);
+		// Saving the score
+		return (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
 	}
 
 	private float relevanceText(String text) {
@@ -192,11 +187,13 @@ public class SharkScoringFilter implements ScoringFilter {
 		String content = parseData.getContentMeta().get(TEXT);
 		Term[] terms = TermFreq.getTerms(content);
 		float rel = 0.0f;
-		for (Term term : terms) {
-			// if (term.getConfidence() > 1) {
-			int pow = th.execQuery(term.getConcept());
-			rel += term.getConfidence() * pow;
-			// }
+		if (terms != null) {
+			for (Term term : terms) {
+				// if (term.getConfidence() > 1) {
+				int pow = th.execQuery(term.getConcept());
+				rel += term.getConfidence() * pow;
+				// }
+			}
 		}
 		return rel;
 	}
