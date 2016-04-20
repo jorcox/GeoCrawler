@@ -47,9 +47,6 @@ public class SharkScoringFilter implements ScoringFilter {
 	private Configuration conf;
 	private float scoreInjected;
 	private float scorePower;
-	private float internalScoreFactor;
-	private float externalScoreFactor;
-	private boolean countFiltered;
 	private Thesaurus th;
 
 	public Configuration getConf() {
@@ -136,7 +133,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	 */
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
-			throws ScoringFilterException {
+					throws ScoringFilterException {
 		float scoreChild = 0.0f;
 
 		/*
@@ -174,7 +171,7 @@ public class SharkScoringFilter implements ScoringFilter {
 				anchorContextScore = relevanceText(context);
 			}
 			neighbourhoodScore = (beta * anchorScore) + ((1 - beta) * anchorContextScore);
-			potentialScore = (gamma * inheritedScore) + ((1 - gamma) * neighbourhoodScore);
+			potentialScore = (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
 			// Saving the score
 			entry.getValue().setScore(potentialScore);
 		}

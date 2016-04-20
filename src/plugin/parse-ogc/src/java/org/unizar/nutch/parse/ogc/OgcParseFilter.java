@@ -89,7 +89,7 @@ public class OgcParseFilter implements HtmlParseFilter {
 		byte[] raw = content.getContent();
 		
 		// Text with HTML tags
-		String h = new String(raw);
+		/*String h = new String(raw);*/
 		
 		// Text without HTML tags
 		String he = parseResult.get(url).getText();
