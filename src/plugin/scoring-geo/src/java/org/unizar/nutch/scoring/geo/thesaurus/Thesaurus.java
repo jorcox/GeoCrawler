@@ -1,7 +1,5 @@
 package org.unizar.nutch.scoring.geo.thesaurus;
 
-import java.io.FileNotFoundException;
-
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -15,13 +13,14 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.SKOS;
 
+import java.io.FileNotFoundException;
+
 public class Thesaurus {
 
-	private String queryString;
-	private final String themeGeo = "<http://www.eionet.europa.eu/gemet/theme/16>";
-	private final String uriGEMET = "http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#";
+	private static final String themeGeo = "<http://www.eionet.europa.eu/gemet/theme/16>";
+	private static final String uriGEMET = "http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#";
 	private Model model;
-	private String[] langs = { "ar", "bg", "cs", "da", "de", "el", "en-US", "en", "es", "et", "eu", "fi", "fr", "hu",
+	private static String[] langs = { "ar", "bg", "cs", "da", "de", "el", "en-US", "en", "es", "et", "eu", "fi", "fr", "hu",
 			"it", "lt", "lv", "mt", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "tr" };
 
 	public Thesaurus(){
@@ -39,25 +38,22 @@ public class Thesaurus {
 	}
 
 	public int execQuery(String word) {
-		queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI() + "> PREFIX skos: <"
+		String queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI() + "> PREFIX skos: <"
 				+ SKOS.getURI() + "> PREFIX gemet: <" + uriGEMET + "> "
 				+ "SELECT distinct ?x WHERE { ?y rdf:type skos:Concept . ?y skos:prefLabel ?x . FILTER regex(?x, '"
 				+ word + "', 'i') ." + " ?y gemet:theme " + themeGeo + "}";
 
 		Query query = QueryFactory.create(queryString);
-		QueryExecution qexec = QueryExecutionFactory.create(query, model);
 		int c = 0;
-		try {
+		try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
 			ResultSet results = qexec.execSelect();
-			for (; results.hasNext();) {
+			for (; results.hasNext(); ) {
 				//String sentencia = "";
 				QuerySolution soln = results.nextSolution();
 				RDFNode x = soln.get("x");
 				System.out.println(x.toString());
 				c++;
 			}
-		} finally {
-			qexec.close();
 		}
 		return c;
 	}

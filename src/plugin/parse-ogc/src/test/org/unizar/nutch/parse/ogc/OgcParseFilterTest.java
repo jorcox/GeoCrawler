@@ -4,7 +4,6 @@ import org.apache.nutch.metadata.Metadata;
 import org.apache.nutch.parse.ParseResult;
 import org.apache.nutch.protocol.Content;
 import org.junit.Test;
-import org.unizar.nutch.test.utils.Utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,6 +11,8 @@ import java.net.URISyntaxException;
 import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
+import static org.unizar.nutch.test.utils.Utils.createContent;
+import static org.unizar.nutch.test.utils.Utils.createParseResultWithMetadata;
 
 public class OgcParseFilterTest {
 
@@ -21,8 +22,8 @@ public class OgcParseFilterTest {
 		File f = new File(getClass().getResource("testWMS.xml").toURI());
 		String contentValue = new Scanner(f).useDelimiter("\\Z").next();
 		String url = "http://wms.magrama.es/sig/Agricultura/TurcSecano/wms.aspx?request=GetCapabilities&service=WMS";
-		ParseResult testParseResult = Utils.createParseResultWithMetadata(new Metadata(), url);
-		Content testContent = Utils.createContent(url, contentValue);
+		ParseResult testParseResult = createParseResultWithMetadata(new Metadata(), url);
+		Content testContent = createContent(url, contentValue);
 
 		OgcParseFilter parseFilter = new OgcParseFilter();
 
@@ -42,8 +43,8 @@ public class OgcParseFilterTest {
 		File f = new File(getClass().getResource("testATOM.xml").toURI());
 		String contentValue = new Scanner(f).useDelimiter("\\Z").next();
 		String url = "http://www.magrama.gob.es/ide/inspire/atom/CategCalidadEvalAmbiental/downloadservice.xml";
-		ParseResult testParseResult = Utils.createParseResultWithMetadata(new Metadata(), url);
-		Content testContent = Utils.createContent(url, contentValue);
+		ParseResult testParseResult = createParseResultWithMetadata(new Metadata(), url);
+		Content testContent = createContent(url, contentValue);
 
 		OgcParseFilter parseFilter = new OgcParseFilter();
 
