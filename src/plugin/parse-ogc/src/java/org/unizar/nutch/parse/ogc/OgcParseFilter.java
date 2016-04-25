@@ -96,25 +96,25 @@ public class OgcParseFilter implements HtmlParseFilter {
 		
 		Outlink[] outLinks = parseData.getOutlinks();
 		
-
-		// For each link read anchor and and around text with a boundary definded in conf
-		for (Outlink outlink : outLinks) {
-			String anchor = outlink.getAnchor();
-			if(!anchor.equals("")){
-				int index = he.indexOf(anchor);  		// Anchor's index (Search around)
-				MapWritable metadataOutlink = new MapWritable();
-				String context = extractContext(he, index);
-				metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(context));
-				metadataOutlink.put(new Text(ANCHOR), new Text(anchor));
-				outlink.setMetadata(metadataOutlink);
-			} else{
-				// TODO ¿What if the outlink doesn't have anchor?
-			}			
+		if(outLinks != null){
+			// For each link read anchor and and around text with a boundary definded in conf
+			for (Outlink outlink : outLinks) {
+				String anchor = outlink.getAnchor();
+				if(!anchor.equals("")){
+					int index = he.indexOf(anchor);  		// Anchor's index (Search around)
+					MapWritable metadataOutlink = new MapWritable();
+					String context = extractContext(he, index);
+					metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(context));
+					metadataOutlink.put(new Text(ANCHOR), new Text(anchor));
+					outlink.setMetadata(metadataOutlink);
+				} else{
+					// TODO ¿What if the outlink doesn't have anchor?
+				}			
+			}		
+			// Save changes in parse data
+			parseData.setOutlinks(outLinks);
 		}
-		
-		// Save changes in parse data
-		parseData.setOutlinks(outLinks);
-		
+				
 		// If the content is xml check if it's an ogc service		
 		String contentType = content.getContentType();		
 		if(contentType.equals("application/xml") || contentType.equals("text/xml")){
