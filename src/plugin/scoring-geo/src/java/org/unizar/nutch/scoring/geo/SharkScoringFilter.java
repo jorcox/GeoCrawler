@@ -1,6 +1,7 @@
 package org.unizar.nutch.scoring.geo;
 
 import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -19,11 +20,7 @@ import org.apache.nutch.scoring.ScoringFilterException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
-import org.unizar.nutch.scoring.term.TermFreq;
-
-import uk.ac.shef.dcs.oak.jate.model.Term;
-
-// Slf4j Logging imports
+import org.unizar.nutch.scoring.term.TermFreqAlt;
 
 /**
  * This plugin implements the shark-search algorithm
@@ -51,6 +48,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	private Configuration conf;
 	private float scoreInjected;
 	private Thesaurus th;
+	private TermFreqAlt termExtractor;
 
 	public Configuration getConf() {
 		return conf;
@@ -63,8 +61,20 @@ public class SharkScoringFilter implements ScoringFilter {
 		gamma = conf.getFloat("score.geo.gamma", 0.5f);
 		th = new Thesaurus();
 		scoreInjected = 0.25f;
+		termExtractor = new TermFreqAlt();
 	}
 
+	/**
+	 * Set an initial score for newly injected pages. Note: newly injected pages
+	 * may have no inlinks, so filter implementations may wish to set this score
+	 * to a non-zero value, to give newly injected pages some initial credit.
+	 * 
+	 * @param url
+	 *            url of the page
+	 * @param datum
+	 *            new datum. Filters will modify it in-place.
+	 * @throws ScoringFilterException
+	 */
 	public void injectedScore(Text url, CrawlDatum datum) throws ScoringFilterException {
 
 	}
@@ -87,7 +97,15 @@ public class SharkScoringFilter implements ScoringFilter {
 	}
 
 	/**
+	 * This method prepares a sort value for the purpose of sorting and
+	 * selecting top N scoring pages during fetchlist generation.
 	 * 
+	 * @param url
+	 *            url of the page
+	 * @param datum
+	 *            page's datum, should not be modified
+	 * @param initSort
+	 *            initial sort value, or a value from previous filters in chain
 	 */
 	public float generatorSortValue(Text url, CrawlDatum datum, float initSort) throws ScoringFilterException {
 		return datum.getScore() * initSort;
@@ -105,11 +123,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	 * parseData.
 	 */
 	public void passScoreAfterParsing(Text url, Content content, Parse parse) {
-
-		// TODO acaba esto | texto guardado en metadatos para acceder desde el
-		// metodo de asignar score a outlinks
 		parse.getData().getContentMeta().set(TEXT, parse.getText());
-
 		parse.getData().getContentMeta().set(Nutch.SCORE_KEY, content.getMetadata().get(Nutch.SCORE_KEY));
 	}
 
@@ -131,7 +145,6 @@ public class SharkScoringFilter implements ScoringFilter {
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
 					throws ScoringFilterException {
-
 		/*
 		 * Get the inherited score
 		 */
@@ -179,12 +192,12 @@ public class SharkScoringFilter implements ScoringFilter {
 
 	private float relevance(ParseData parseData) {
 		String content = parseData.getContentMeta().get(TEXT);
-		Term[] terms = TermFreq.getTerms(content);
+		LinkedHashMap<String, Float> terms = termExtractor.extractTerms(content);
 		float rel = 0.0f;
 		if (terms != null) {
-			for (Term term : terms) {
-				int pow = th.execQuery(term.getConcept());
-				rel += term.getConfidence() * pow;
+			for (Entry<String, Float> entry : terms.entrySet()) {
+				int pow = th.execQuery(entry.getKey());
+				rel += entry.getValue() * pow;
 			}
 		}
 		return rel;

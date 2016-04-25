@@ -1,5 +1,7 @@
 package org.unizar.nutch.indexer.ogc;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
@@ -16,7 +18,6 @@ import org.apache.nutch.parse.ParseData;
 import org.apache.nutch.parse.ParseImpl;
 import org.apache.nutch.parse.ParseResult;
 import org.apache.nutch.protocol.Content;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.unizar.nutch.parse.ogc.OgcParseFilter;
@@ -59,11 +60,11 @@ public class OgcIndexingFilterTest {
 
 		NutchDocument doc = indexingFilter.filter(nutchDocument, parse, urlText, datum, inlinks);
 
-		Assert.assertTrue("Comprobación de que el campo ogc_version esta indexado",
+		assertTrue("Comprobación de que el campo ogc_version esta indexado",
 				doc.getFieldNames().contains("ogc_version"));
-		Assert.assertTrue("Comprobación de que el campo ogc_service esta indexado",
+		assertTrue("Comprobación de que el campo ogc_service esta indexado",
 				doc.getFieldNames().contains("ogc_service"));
-		Assert.assertTrue("Comprobación de que el campo raw_content esta indexado",
+		assertTrue("Comprobación de que el campo raw_content esta indexado",
 				doc.getFieldNames().contains("raw_content"));
 	}
 }

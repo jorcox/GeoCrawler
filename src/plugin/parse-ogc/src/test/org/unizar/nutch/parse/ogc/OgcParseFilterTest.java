@@ -1,18 +1,18 @@
 package org.unizar.nutch.parse.ogc;
 
-import org.apache.nutch.metadata.Metadata;
-import org.apache.nutch.parse.ParseResult;
-import org.apache.nutch.protocol.Content;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.unizar.nutch.test.utils.Utils.createContent;
+import static org.unizar.nutch.test.utils.Utils.createParseResultWithMetadata;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 
-import static org.junit.Assert.assertEquals;
-import static org.unizar.nutch.test.utils.Utils.createContent;
-import static org.unizar.nutch.test.utils.Utils.createParseResultWithMetadata;
+import org.apache.nutch.metadata.Metadata;
+import org.apache.nutch.parse.ParseResult;
+import org.apache.nutch.protocol.Content;
+import org.junit.Test;
 
 public class OgcParseFilterTest {
 
@@ -33,10 +33,10 @@ public class OgcParseFilterTest {
 		// Comprobaciones
 		Metadata metadata = res.get(url).getData().getParseMeta();
 		assertEquals("1.3.0", metadata.get("ogc_version"));
-	    assertEquals("wms", metadata.get("ogc_service"));
+		assertEquals("wms", metadata.get("ogc_service"));
 
 	}
-	
+
 	@Test
 	public void testATOM() throws FileNotFoundException, URISyntaxException {
 		// Preparacion
@@ -54,7 +54,7 @@ public class OgcParseFilterTest {
 		// Comprobaciones
 		Metadata metadata = res.get(url).getData().getParseMeta();
 		assertEquals("1.0", metadata.get("ogc_version"));
-	    assertEquals("atom", metadata.get("ogc_service"));
+		assertEquals("atom", metadata.get("ogc_service"));
 
 	}
 
