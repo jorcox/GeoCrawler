@@ -1,5 +1,7 @@
 package org.unizar.nutch.parse.ogc;
 
+import com.google.common.base.Strings;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
@@ -100,7 +102,7 @@ public class OgcParseFilter implements HtmlParseFilter {
 			// For each link read anchor and and around text with a boundary definded in conf
 			for (Outlink outlink : outLinks) {
 				String anchor = outlink.getAnchor();
-				if(!anchor.equals("")){
+				if(!Strings.isNullOrEmpty(anchor)){
 					int index = he.indexOf(anchor);  		// Anchor's index (Search around)
 					MapWritable metadataOutlink = new MapWritable();
 					String context = extractContext(he, index);

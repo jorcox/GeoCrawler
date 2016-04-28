@@ -63,7 +63,7 @@ public class Thesaurus {
 		int c = 0;
 		try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
 			ResultSet results = qexec.execSelect();
-			for (; results.hasNext(); ) {
+			while (results.hasNext()) {
 				//String sentencia = "";
 				QuerySolution soln = results.nextSolution();
 				RDFNode x = soln.get("x");
