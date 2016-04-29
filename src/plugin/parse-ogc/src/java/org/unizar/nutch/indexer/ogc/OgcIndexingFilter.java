@@ -41,13 +41,17 @@ public class OgcIndexingFilter implements IndexingFilter {
 			throws IndexingException {
 		ParseData dataP = parse.getData();
 		Metadata meta = dataP.getParseMeta();
-
+		boolean index = false;
+		
 		for (String key : meta.names()) {
+			if(key.equals("ogc_service"))
+				index = true;
 			String value = meta.get(key);
 			LOG.info("Adding " + key + " to NutchDocument");
 			doc.add(key, value);
 		}
-		return doc;
+		/* Return the document if it is an ogc service, otherwise return null */
+		return index ? doc : null;
 	}
 
 }
