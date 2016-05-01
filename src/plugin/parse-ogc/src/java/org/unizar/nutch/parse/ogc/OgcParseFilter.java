@@ -110,7 +110,10 @@ public class OgcParseFilter implements HtmlParseFilter {
 					metadataOutlink.put(new Text(ANCHOR), new Text(anchor));
 					outlink.setMetadata(metadataOutlink);
 				} else{
-					// TODO ¿What if the outlink doesn't have anchor?
+					MapWritable metadataOutlink = new MapWritable();		
+					metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(""));
+					metadataOutlink.put(new Text(ANCHOR), new Text(""));
+					outlink.setMetadata(metadataOutlink);
 				}			
 			}		
 			// Save changes in parse data
@@ -137,7 +140,8 @@ public class OgcParseFilter implements HtmlParseFilter {
 	
 			// TODO Possible improve 
 			// Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
-
+		
+		parseResult.get(url).getData().setParseMeta(metadata);
 		return parseResult;
 	}
 

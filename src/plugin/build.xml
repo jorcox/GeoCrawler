@@ -91,8 +91,9 @@
         <!-- Plugin propio -->
         <ant dir="index-length" target="deploy"/>
         <ant dir="parse-ogc" target="deploy"/>
-	<ant dir="lib-log4j" target="deploy"/>
+		<ant dir="lib-log4j" target="deploy"/>
         <ant dir="scoring-geo" target="deploy"/>
+        <ant dir="indexer-ogc" target="deploy"/>
     </target>
 
     <!-- ====================================================== -->
@@ -142,6 +143,7 @@
             <ant dir="index-length" target="test"/>
             <ant dir="parse-ogc" target="test"/>
             <ant dir="scoring-geo" target="test"/>
+            <ant dir="indexer-ogc" target="test"/>
         </parallel>
     </target>
 
@@ -216,5 +218,6 @@
         <ant dir="index-length" target="clean"/>
         <ant dir="parse-ogc" target="clean"/>
         <ant dir="scoring-geo" target="clean"/>
+        <ant dir="indexer-ogc" target="clean"/>
     </target>
 </project>

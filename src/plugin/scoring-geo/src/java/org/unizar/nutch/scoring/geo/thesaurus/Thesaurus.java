@@ -8,12 +8,14 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.sparql.function.library.print;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.SKOS;
 
 import java.io.FileNotFoundException;
+import java.util.regex.PatternSyntaxException;
 
 public class Thesaurus {
 
@@ -28,10 +30,10 @@ public class Thesaurus {
 	private static final String themeUrban = "<http://www.eionet.europa.eu/gemet/theme/38>";
 	private static final String uriGEMET = "http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#";
 	private Model model;
-	private static String[] langs = { "ar", "bg", "cs", "da", "de", "el", "en-US", "en", "es", "et", "eu", "fi", "fr", "hu",
-			"it", "lt", "lv", "mt", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "tr" };
+	private static String[] langs = { "ar", "bg", "cs", "da", "de", "el", "en-US", "en", "es", "et", "eu", "fi", "fr",
+			"hu", "it", "lt", "lv", "mt", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "tr" };
 
-	public Thesaurus(){
+	public Thesaurus() {
 		model = FileManager.get().loadModel("gemetThesaurus.rdf");
 		Model modelBackbone = FileManager.get().loadModel("gemet-backbone.rdf");
 		Model modelCore = FileManager.get().loadModel("gemet-skoscore.rdf");
@@ -42,36 +44,42 @@ public class Thesaurus {
 			Model definitionLang = FileManager.get().loadModel("gemet-definitions-" + lang + ".rdf");
 			model.add(groupLang);
 			model.add(definitionLang);
-		}		
+		}
 	}
 
 	public int execQuery(String word) {
-		String queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI() + "> PREFIX skos: <"
-				+ SKOS.getURI() + "> PREFIX gemet: <" + uriGEMET + "> "
-				+ "SELECT distinct ?x WHERE { ?y rdf:type skos:Concept . ?y skos:prefLabel ?x . FILTER regex(?x, '"
-				+ word + "', 'i') ." + "{ ?y gemet:theme " + themeGeo + "} UNION {" + 
-				"?y gemet:theme " + themeAir + "} UNION {" +
-				"?y gemet:theme " + themeClimate + "} UNION {" +
-				"?y gemet:theme " + themeAgricultute + "} UNION {" +
-				"?y gemet:theme " + themeFishery + "} UNION {" +
-				"?y gemet:theme " + themeNatural + "} UNION {" +
-				"?y gemet:theme " + themePollution + "} UNION {" +
-				"?y gemet:theme " + themeWater + "} UNION {" +
-				"?y gemet:theme " + themeUrban + "}}";
+		System.out.println(word);
+		String queryString = "";
+		try {
+			queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI()
+					+ "> PREFIX skos: <" + SKOS.getURI() + "> PREFIX gemet: <" + uriGEMET + "> "
+					+ "SELECT distinct ?x WHERE { ?y rdf:type skos:Concept . ?y skos:prefLabel ?x . FILTER regex(?x, '"
+					+ word + "', 'i') ." + "{ ?y gemet:theme " + themeGeo + "} UNION {" + "?y gemet:theme " + themeAir
+					+ "} UNION {" + "?y gemet:theme " + themeClimate + "} UNION {" + "?y gemet:theme "
+					+ themeAgricultute + "} UNION {" + "?y gemet:theme " + themeFishery + "} UNION {"
+					+ "?y gemet:theme " + themeNatural + "} UNION {" + "?y gemet:theme " + themePollution + "} UNION {"
+					+ "?y gemet:theme " + themeWater + "} UNION {" + "?y gemet:theme " + themeUrban + "}}";
 
-		Query query = QueryFactory.create(queryString);
-		int c = 0;
-		try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
-			ResultSet results = qexec.execSelect();
-			while (results.hasNext()) {
-				//String sentencia = "";
-				QuerySolution soln = results.nextSolution();
-				RDFNode x = soln.get("x");
-				System.out.println(x.toString());
-				c++;
+			Query query = QueryFactory.create(queryString);
+			int c = 0;
+			try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
+				ResultSet results = qexec.execSelect();
+				while (results.hasNext()) {
+					// String sentencia = "";
+					QuerySolution soln = results.nextSolution();
+					RDFNode x = soln.get("x");
+					// System.out.println(x.toString());
+					c++;
+				}
 			}
+			return c;
+		} catch (PatternSyntaxException e) {
+			System.out.println(word);
+			System.out.println();
+			System.out.println(queryString);
+			return 0;
 		}
-		return c;
+
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {

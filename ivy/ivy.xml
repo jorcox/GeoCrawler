@@ -127,6 +127,21 @@
 		<dependency org="org.apache.jena" name="jena-arq" rev="3.0.1"/>
 
 
+		<!-- JAXEN XML dependencies -->
+		<dependency org="jaxen" name="jaxen" rev="1.1.1"/>
+
+		<!-- CyberNeko dependencies -->
+		<dependency org="net.sourceforge.nekohtml" name="nekohtml" rev="1.9.13"/>
+
+		<!-- Solr dependencies -->
+		<dependency org="org.apache.solr" name="solr-solrj" rev="5.4.1"/>
+
+		<!-- Tika dependencies -->
+		<!--<dependency org="org.apache.tika" name="tika-parsers" rev="1.12"/>-->
+		<!-- <dependency org="org.apache.tika" name="tika-core" rev="1.12"/>-->
+
+
+
 
 
 

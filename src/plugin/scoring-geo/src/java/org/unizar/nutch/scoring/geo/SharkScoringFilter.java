@@ -144,7 +144,8 @@ public class SharkScoringFilter implements ScoringFilter {
 	 */
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
-					throws ScoringFilterException {
+			throws ScoringFilterException {
+		LOG.info("URL: " + fromUrl + "   Num. Dest.: " + targets.size());
 		/*
 		 * Get the inherited score
 		 */
@@ -161,11 +162,16 @@ public class SharkScoringFilter implements ScoringFilter {
 		/*
 		 * Computing the inherited score of child node
 		 */
-		float scoreChild = delta * (relevance(parseData) > 0 ? relevance(parseData) : inheritedScore);
+		String content = parseData.getContentMeta().get(TEXT);
+		float dataRel = relevance(content);
+		float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
 
+		int oL = 0;
 		for (Entry<Text, CrawlDatum> entry : targets) {
 			float potentialScore = computePotentialScore(scoreChild, entry.getValue().getMetaData());
+			LOG.info("Outlink " + oL + "  Score : " + potentialScore);
 			entry.getValue().setScore(potentialScore);
+			oL++;
 		}
 		return null;
 	}
@@ -173,8 +179,8 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float computePotentialScore(float scoreChild, Map metadata) {
 		String anchor = metadata.get(TEXT_ANCHOR).toString();
 		String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
-		float anchorScore = relevanceText(anchor);
-		float anchorContextScore = anchorScore > 0 ? 1f : relevanceText(context);
+		float anchorScore = relevance(anchor);
+		float anchorContextScore = anchorScore > 0 ? 1f : relevance(context);
 		float neighbourhoodScore = (beta * anchorScore) + ((1 - beta) * anchorContextScore);
 		// Saving the score
 		return (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
@@ -184,20 +190,37 @@ public class SharkScoringFilter implements ScoringFilter {
 		String[] words = text.split(" ");
 		float rel = 0.0f;
 		for (String word : words) {
-			int pow = th.execQuery(word);
-			rel += pow;
+			word = filter(word);
+			if (word.length() >= 2 && word.length()<100) {
+				int pow = th.execQuery(word);
+				rel += pow;
+			}
 		}
 		return rel;
 	}
 
-	private float relevance(ParseData parseData) {
-		String content = parseData.getContentMeta().get(TEXT);
+	private String filter(String word) {
+		word = termExtractor.deleteSymbols(word);
+		word = termExtractor.filterStopWords(word);
+		return word;
+	}
+
+	private float relevance(String content) {		
 		LinkedHashMap<String, Float> terms = termExtractor.extractTerms(content);
 		float rel = 0.0f;
 		if (terms != null) {
+			int indx = 0;
 			for (Entry<String, Float> entry : terms.entrySet()) {
-				int pow = th.execQuery(entry.getKey());
-				rel += entry.getValue() * pow;
+				// TODO N top relevant terms
+				if(indx>=10){
+					break;
+				}
+				if(entry.getKey().length()<100){
+					int pow = th.execQuery(entry.getKey());
+					rel += entry.getValue() * pow;
+				}
+				indx++;
+				//System.out.println(indx);
 			}
 		}
 		return rel;

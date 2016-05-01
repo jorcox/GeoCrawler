@@ -249,7 +249,8 @@ do
 
   if $INDEXFLAG; then
       echo "Indexing $SEGMENT to index"
-      __bin_nutch index $JAVA_PROPERTIES "$CRAWL_PATH"/crawldb -linkdb "$CRAWL_PATH"/linkdb "$CRAWL_PATH"/segments/$SEGMENT
+     #__bin_nutch solrindex $JAVA_PROPERTIES http://127.0.0.1:8983/solr/ "$CRAWL_PATH"/crawldb -linkdb "$CRAWL_PATH"/linkdb "$CRAWL_PATH"/segments/$SEGMENT
+     __bin_nutch index $JAVA_PROPERTIES "$CRAWL_PATH"/crawldb -linkdb "$CRAWL_PATH"/linkdb "$CRAWL_PATH"/segments/$SEGMENT
 
       echo "Cleaning up index if possible"
       __bin_nutch clean $JAVA_PROPERTIES "$CRAWL_PATH"/crawldb

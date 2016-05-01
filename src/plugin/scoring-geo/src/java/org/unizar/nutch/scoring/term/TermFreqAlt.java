@@ -32,7 +32,8 @@ public class TermFreqAlt {
 	private void loadStopWords() {
 		try {
 			URL url = getClass().getResource(STOPLIST_FILE);
-			Scanner sc = new Scanner(new File(url.getPath()));
+			System.out.println("URL soptlist -> " + url);
+			Scanner sc = new Scanner(new File(STOPLIST_FILE));
 			while (sc.hasNextLine()) {
 				String stopWord = sc.nextLine();
 				if (stopWord.length() > 0 && !stopWord.substring(0, 1).equals("#")) {
@@ -45,8 +46,13 @@ public class TermFreqAlt {
 		}
 	}
 
+	public String filterStopWords(String word) {
+		return stopWords.contains(word) ? "" : word;
+	}
+
 	public LinkedHashMap<String, Float> extractTerms(String text) {
 		LinkedHashMap<String, Integer> terms = new LinkedHashMap<>();
+		/* Pre filtering */
 		/* Deleting all unnecesary symbols */
 		String textNS = deleteSymbols(text);
 
@@ -59,12 +65,16 @@ public class TermFreqAlt {
 		int wordsRepeatedNumber = words.length;
 		int uniqueWordsNumber = 0;
 		for (String word : words) {
-			if (terms.containsKey(word) && !stopWords.contains(word)) {
-				int ac = terms.get(word);
-				terms.put(word, ++ac);
-			} else if (!stopWords.contains(word)) {
-				uniqueWordsNumber++;
-				terms.put(word, 1);
+			/* Post filtering */
+			word = deleteSymbols(word);
+			if (word.length() >= 2) {
+				if (terms.containsKey(word) && !stopWords.contains(word)) {
+					int ac = terms.get(word);
+					terms.put(word, ++ac);
+				} else if (!stopWords.contains(word)) {
+					uniqueWordsNumber++;
+					terms.put(word, 1);
+				}
 			}
 		}
 		Map<String, Integer> shortedTerms = sortByValue(terms);
@@ -97,9 +107,9 @@ public class TermFreqAlt {
 		return result;
 	}
 
-	private String deleteSymbols(String text) {
-		return text.replaceAll(
-				"[\\.|\\,|\\:|\\+|\\\"|\\'|\\-|\\{|\\}|\\?|\\¿|\\/|\\€|\\$|\\!|\\¡|\\;|\\”|\\“|\\&|\\(|\\)|[1-9]]", "");
+	public String deleteSymbols(String text) {
+		return text.replaceAll("[\\.|\\,|\\:|\\+|\\\"|\\'|\\-|\\{|\\}|\\?|\\¿|\\/|\\€|\\$|\\!|\\¡|\\;|"
+				+ "\\”|\\“|\\&|\\(|\\)|\\[|\\]|\\º|\\ª|\\@|\\¬|\\&|\\|[1-9]+]", "");
 	}
 
 	/*

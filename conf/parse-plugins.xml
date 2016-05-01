@@ -63,6 +63,10 @@
         <plugin id="parse-html"/>
     </mimeType>
 
+    <mimeType name="application/xml">
+        <plugin id="parse-tika"/>
+    </mimeType>
+
     <mimeType name="text/xml">
         <plugin id="parse-tika"/>
         <plugin id="feed"/>
