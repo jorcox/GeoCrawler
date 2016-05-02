@@ -1,5 +1,8 @@
 package org.unizar.nutch.scoring.term;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -13,13 +16,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class TermFreqAlt {
 
 	private final static Logger LOG = LoggerFactory.getLogger(TermFreqAlt.class);
-	private final String STOPLIST_FILE = "stoplist.txt";
+	private final static String STOPLIST_FILE = "stoplist.txt";
 	private ArrayList<String> stopWords = new ArrayList<>();
 
 	public TermFreqAlt() {
@@ -108,8 +108,7 @@ public class TermFreqAlt {
 	}
 
 	public String deleteSymbols(String text) {
-		return text.replaceAll("[\\.|\\,|\\:|\\+|\\\"|\\'|\\-|\\{|\\}|\\?|\\¿|\\/|\\€|\\$|\\!|\\¡|\\;|"
-				+ "\\”|\\“|\\&|\\(|\\)|\\[|\\]|\\º|\\ª|\\@|\\¬|\\&|\\|[1-9]+]", "");
+		return text.replaceAll("[\\.,:\\+\"'\\-\\{\\}\\?¿/€\\$!¡;&\\(\\)\\[\\]ºª@¬1-9]", "");
 	}
 
 	/*
