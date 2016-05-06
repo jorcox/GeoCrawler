@@ -114,7 +114,7 @@ numTasks=`expr $numSlaves \* 2`
 
 # number of urls to fetch in one iteration
 # 250K per task?
-sizeFetchlist=`expr $numSlaves \* 50`
+sizeFetchlist=`expr $numSlaves \* 200`
 
 # time limit for feching
 timeLimitFetch=180

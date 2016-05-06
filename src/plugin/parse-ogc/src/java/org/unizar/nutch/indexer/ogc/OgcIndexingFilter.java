@@ -47,7 +47,7 @@ public class OgcIndexingFilter implements IndexingFilter {
 			if(key.equals("ogc_service"))
 				index = true;
 			String value = meta.get(key);
-			LOG.info("Adding " + key + " to NutchDocument");
+			LOG.info("Adding " + url + " to NutchDocument");
 			doc.add(key, value);
 		}
 		/* Return the document if it is an ogc service, otherwise return null */

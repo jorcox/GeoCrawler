@@ -1,0 +1,2 @@
+http://ogc.larioja.org/wcs/ortofotos/request.php?request=GetCapabilities&service=WCS
+http://ogc.larioja.org/wms/098muni/request.php?request=GetCapabilities&service=WMS

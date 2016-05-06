@@ -254,6 +254,7 @@ public class FetcherThread extends Thread {
             Protocol protocol = this.protocolFactory.getProtocol(fit.url
                 .toString());
             BaseRobotRules rules = protocol.getRobotRules(fit.url, fit.datum);
+            /*
             if (!rules.isAllowed(fit.u.toString())) {
               // unblock
               ((FetchItemQueues) fetchQueues).finishFetchItem(fit, true);
@@ -266,6 +267,7 @@ public class FetcherThread extends Thread {
               reporter.incrCounter("FetcherStatus", "robots_denied", 1);
               continue;
             }
+            */
             if (rules.getCrawlDelay() > 0) {
               if (rules.getCrawlDelay() > maxCrawlDelay && maxCrawlDelay >= 0) {
                 // unblock

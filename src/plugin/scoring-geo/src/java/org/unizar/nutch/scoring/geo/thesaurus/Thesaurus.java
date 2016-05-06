@@ -48,17 +48,21 @@ public class Thesaurus {
 	}
 
 	public int execQuery(String word) {
-		System.out.println(word);
+		//System.out.println(word);
 		String queryString = "";
 		try {
 			queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI()
 					+ "> PREFIX skos: <" + SKOS.getURI() + "> PREFIX gemet: <" + uriGEMET + "> "
 					+ "SELECT distinct ?x WHERE { ?y rdf:type skos:Concept . ?y skos:prefLabel ?x . FILTER regex(?x, '"
-					+ word + "', 'i') ." + "{ ?y gemet:theme " + themeGeo + "} UNION {" + "?y gemet:theme " + themeAir
-					+ "} UNION {" + "?y gemet:theme " + themeClimate + "} UNION {" + "?y gemet:theme "
-					+ themeAgricultute + "} UNION {" + "?y gemet:theme " + themeFishery + "} UNION {"
-					+ "?y gemet:theme " + themeNatural + "} UNION {" + "?y gemet:theme " + themePollution + "} UNION {"
-					+ "?y gemet:theme " + themeWater + "} UNION {" + "?y gemet:theme " + themeUrban + "}}";
+					+ word + "', 'i') ." + "{ ?y gemet:theme " + themeGeo + "} UNION {" + 
+					"?y gemet:theme " + themeAir + "} UNION {" + 
+					//"?y gemet:theme " + themeClimate + "} UNION {" + 
+					//"?y gemet:theme " + themeAgricultute + "} UNION {" + 
+					//"?y gemet:theme " + themeFishery + "} UNION {"	+ 
+					//"?y gemet:theme " + themeNatural + "} UNION {" + 
+					//"?y gemet:theme " + themePollution + "} UNION {" + 
+					//"?y gemet:theme " + themeWater + "} UNION {" + 
+					"?y gemet:theme " + themeUrban + "}}";
 
 			Query query = QueryFactory.create(queryString);
 			int c = 0;

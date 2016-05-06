@@ -64,6 +64,77 @@
         <value>salida</value>
         <description>Path out data</description>
     </property>
+
+    <property>
+        <name>db.max.outlinks.per.page</name>
+        <value>-1</value>
+        <description>The maximum number of outlinks that we'll process for a page.
+         If this value is nonnegative (>=0), at most db.max.outlinks.per.page outlinks
+         will be processed for a page; otherwise, all outlinks will be processed.
+         </description>
+    </property>
+
+    <property>
+        <name>fetcher.queue.depth.multiplier</name>
+        <value>100</value>
+        <description>(EXPERT)The fetcher buffers the incoming URLs into queues based on the [host|domain|IP]
+         (see param fetcher.queue.mode). The depth of the queue is the number of threads times the value of this parameter.
+         A large value requires more memory but can improve the performance of the fetch when the order of the URLS in the fetch list
+         is not optimal.
+        </description>
+    </property>
+
+    <property>
+      <name>fetcher.server.delay</name>
+      <value>0.1</value>
+      <description>The number of seconds the fetcher will delay between 
+       successive requests to the same server. Note that this might get
+       overridden by a Crawl-Delay from a robots.txt and is used ONLY if 
+       fetcher.threads.per.queue is set to 1.
+       </description>
+    </property>
+
+    <property>
+      <name>fetcher.threads.fetch</name>
+      <value>50</value>
+      <description>The number of FetcherThreads the fetcher should use.
+      This is also determines the maximum number of requests that are
+      made at once (each FetcherThread handles one connection). The total
+      number of threads running in distributed mode will be the number of
+      fetcher threads * number of nodes as fetcher has one map task per node.
+      </description>
+    </property>
+
+    <property>
+      <name>fetcher.threads.per.queue</name>
+      <value>10</value>
+      <description>This number is the maximum number of threads that
+        should be allowed to access a queue at one time. Setting it to 
+        a value > 1 will cause the Crawl-Delay value from robots.txt to
+        be ignored and the value of fetcher.server.min.delay to be used
+        as a delay between successive requests to the same server instead 
+        of fetcher.server.delay.
+       </description>
+    </property>
+
+    <property>
+      <name>http.content.limit</name>
+      <value>-1</value>
+      <description>The length limit for downloaded content using the http://
+      protocol, in bytes. If this value is nonnegative (>=0), content longer
+      than it will be truncated; otherwise, no truncation at all. Do not
+      confuse this setting with the file.content.limit setting.
+      </description>
+    </property>
+
+    <property>
+      <name>http.robot.rules.whitelist</name>
+      <value>.*</value>
+      <description>Comma separated list of hostnames or IP addresses to ignore 
+      robot rules parsing for. Use with care and only if you are explicitly
+      allowed by the site owner to ignore the site's robots.txt!
+      </description>
+    </property>
     
 
 </configuration>

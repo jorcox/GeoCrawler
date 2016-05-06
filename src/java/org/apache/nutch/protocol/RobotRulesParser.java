@@ -164,6 +164,7 @@ public abstract class RobotRulesParser implements Tool {
     
     if (matcher != null) {
     	match = matcher.matches(urlString);
+    	System.out.println("Whitelist " + match);
     }
     
     return match;

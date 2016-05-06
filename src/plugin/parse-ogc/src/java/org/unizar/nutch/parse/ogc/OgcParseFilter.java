@@ -39,33 +39,34 @@ public class OgcParseFilter implements HtmlParseFilter {
 
 	private final static String RAW_CONTENT = "raw_content";
 
-    private final static String OGC_SERVICE = "ogc_service";
+	private final static String OGC_SERVICE = "ogc_service";
 
-    private final static String OGC_VERSION = "ogc_version";
-    
-    private final static String ANCHOR_CONTEXT = "anchor_context";
-    
-    private final static String ANCHOR = "anchor";
+	private final static String OGC_VERSION = "ogc_version";
 
-    private static final Logger LOG = LoggerFactory.getLogger(OgcParseFilter.class);
-    
-    private int boundary;
+	private final static String ANCHOR_CONTEXT = "anchor_context";
 
-    private Configuration conf;
+	private final static String ANCHOR = "anchor";
+
+	private static final Logger LOG = LoggerFactory.getLogger(OgcParseFilter.class);
+
+	private int boundary;
+
+	private Configuration conf;
 
 	private Namespace nsc;
-    private static final Map<String, String> CONTAINS_MAP = new HashMap<>();
-    static {
-        CONTAINS_MAP.put("wms","wms");
-        CONTAINS_MAP.put("wms_ms","wms");
-        CONTAINS_MAP.put("csw","csw");
-        CONTAINS_MAP.put("wfs","wfs");
-        CONTAINS_MAP.put("wcs","wcs");
-        CONTAINS_MAP.put("wcts","wcts");
-        CONTAINS_MAP.put("wps","wps");
-    }
+	private static final Map<String, String> CONTAINS_MAP = new HashMap<>();
+	static {
+		CONTAINS_MAP.put("wms", "wms");
+		CONTAINS_MAP.put("wms_ms", "wms");
+		CONTAINS_MAP.put("csw", "csw");
+		CONTAINS_MAP.put("wfs", "wfs");
+		CONTAINS_MAP.put("wcs", "wcs");
+		CONTAINS_MAP.put("wcts", "wcts");
+		CONTAINS_MAP.put("wps", "wps");
+		CONTAINS_MAP.put("wmt_ms", "wms");
+	}
 
-    @Override
+	@Override
 	public Configuration getConf() {
 		return conf;
 	}
@@ -80,56 +81,57 @@ public class OgcParseFilter implements HtmlParseFilter {
 	public ParseResult filter(Content content, ParseResult parseResult, HTMLMetaTags metaTags, DocumentFragment doc) {
 
 		String url = content.getUrl();
-		
+
 		LOG.info("Getting ogc content for " + url);
 
 		Metadata metadata = parseResult.get(url).getData().getParseMeta();
-		
+
 		ParseData parseData = parseResult.get(url).getData();
-		
 
 		byte[] raw = content.getContent();
-		
+
 		// Text with HTML tags
-		/*String h = new String(raw);*/
-		
+		/* String h = new String(raw); */
+
 		// Text without HTML tags
 		String he = parseResult.get(url).getText();
-		
+
 		Outlink[] outLinks = parseData.getOutlinks();
-		
-		if(outLinks != null){
-			// For each link read anchor and and around text with a boundary definded in conf
+
+		if (outLinks != null) {
+			// For each link read anchor and and around text with a boundary
+			// definded in conf
 			for (Outlink outlink : outLinks) {
 				String anchor = outlink.getAnchor();
-				if(!Strings.isNullOrEmpty(anchor)){
-					int index = he.indexOf(anchor);  		// Anchor's index (Search around)
+				if (!Strings.isNullOrEmpty(anchor)) {
+					int index = he.indexOf(anchor); // Anchor's index (Search
+													// around)
 					MapWritable metadataOutlink = new MapWritable();
 					String context = extractContext(he, index);
 					metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(context));
 					metadataOutlink.put(new Text(ANCHOR), new Text(anchor));
 					outlink.setMetadata(metadataOutlink);
-				} else{
-					MapWritable metadataOutlink = new MapWritable();		
+				} else {
+					MapWritable metadataOutlink = new MapWritable();
 					metadataOutlink.put(new Text(ANCHOR_CONTEXT), new Text(""));
 					metadataOutlink.put(new Text(ANCHOR), new Text(""));
 					outlink.setMetadata(metadataOutlink);
-				}			
-			}		
+				}
+			}
 			// Save changes in parse data
 			parseData.setOutlinks(outLinks);
 		}
-				
-		// If the content is xml check if it's an ogc service		
-		String contentType = content.getContentType();		
-		if(contentType.equals("application/xml") || contentType.equals("text/xml")){
-				
+
+		// If the content is xml check if it's an ogc service
+		String contentType = content.getContentType();
+		if (contentType.equals("application/xml") || contentType.equals("text/xml")) {
+
 			metadata.add(RAW_CONTENT, new String(raw));
-	
+
 			Document dom = XMLUtils.parseXml(new ByteArrayInputStream(raw));
-	
+
 			nsc = dom.getRootElement().getNamespace();
-	
+
 			try {
 				detectOGC(dom, metadata);
 			} catch (JaxenException e) {
@@ -137,62 +139,69 @@ public class OgcParseFilter implements HtmlParseFilter {
 						.getEmptyParseResult(content.getUrl(), getConf());
 			}
 		}
-	
-			// TODO Possible improve 
-			// Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
-		
+
+		// TODO Possible improve
+		// Outlink[] outlinks = OutlinkExtractor.getOutlinks(text, getConf());
+
 		parseResult.get(url).getData().setParseMeta(metadata);
 		return parseResult;
 	}
 
 	private String extractContext(String he, int index) {
 		String res = "";
-		try{
-			res = he.substring(index-boundary, index+boundary);
-		} catch (IndexOutOfBoundsException e){
-			if(index-boundary < 0 && index+boundary > he.length() ) {
+		try {
+			res = he.substring(index - boundary, index + boundary);
+		} catch (IndexOutOfBoundsException e) {
+			if (index - boundary < 0 && index + boundary > he.length()) {
 				res = he.substring(0, he.length());
-			} else if(index+boundary > he.length()){
+			} else if (index + boundary > he.length()) {
 				// index + boundary is larger than string length
-				res = he.substring(index-boundary, he.length());
-			} else if(index-boundary < 0) {
+				res = he.substring(index - boundary, he.length());
+			} else if (index - boundary < 0) {
 				res = he.substring(0, he.length());
 			}
-		}		
+		}
 		return res;
 	}
 
 	private void detectOGC(Document dom, Metadata metadata) throws JaxenException {
+		//System.out.println("Parse Filter");
 		JDOMXPath xp = new JDOMXPath("//*");
 		xp.addNamespace(nsc.getPrefix(), nsc.getURI());
 		List<?> ls = xp.selectNodes(dom);
 		Element root = (Element) ls.get(0);
-		String name = root.getName();
+		//String name = root.getName();
 		String version = root.getAttributeValue("version");
-		if (version != null){
+		//System.out.println("Version ->" + version);
+		if (version != null) {
 			metadata.add(OGC_VERSION, version);
 		}
 
-
-		for(Map.Entry<String,String> e: CONTAINS_MAP.entrySet()) {
-			if (containsOGC(name, e.getKey())) {
-				metadata.add(OGC_SERVICE, e.getValue());
-				return;
+		for (Object element : ls) {
+			String text = ((Element) element).getName();
+			for (Map.Entry<String, String> e : CONTAINS_MAP.entrySet()) {
+				//System.out.println("Contains? Text -> " + text + " Key -> " + e.getKey());
+				if (containsOGC(text, e.getKey())) {
+					// System.out.println("Contains -> " + e.getKey());
+					metadata.add(OGC_SERVICE, e.getValue());
+					return;
+				}
 			}
 		}
 
-		if(checkAtom(ls)){
+		if (checkAtom(ls)) {
 			metadata.add(OGC_VERSION, "1.0");
 			metadata.add(OGC_SERVICE, "atom");
-		} else if(checkWMTS(ls)){
+		} else if (checkWMTS(ls)) {
 			metadata.add(OGC_SERVICE, "wmts");
+			//System.out.println("Contains -> " + "wmts");
 		} else {
 			LOG.info("OGC service not detected");
 		}
 	}
 
 	private boolean checkWMTS(List<?> ls) {
-		Element root = (Element) ls.get(0);		
+		Element root = (Element) ls.get(0);
 		return containsOGC(root.getNamespace().getURI(), "WMTS");
 	}
 
