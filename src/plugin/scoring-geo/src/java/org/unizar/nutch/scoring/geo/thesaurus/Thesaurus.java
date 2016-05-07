@@ -73,37 +73,6 @@ public class Thesaurus {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Thesaurus th = new Thesaurus();
-		th.execQuery("agua");
-		/*
-		 * Model model1 = FileManager.get().loadModel("gemetThesaurus.rdf");
-		 * Model model2 = FileManager.get().loadModel("gemet-backbone.rdf");
-		 * Model model3 = FileManager.get().loadModel("gemet-definitions.rdf");
-		 * Model model4 = FileManager.get().loadModel("gemet-groups.rdf"); Model
-		 * model5 = FileManager.get().loadModel("gemet-skoscore.rdf");
-		 * model1.add(model2); model1.add(model3); model1.add(model4);
-		 * model1.add(model5);
-		 * 
-		 * String a = model1.toString();
-		 * 
-		 * FileOutputStream fop = null; File file; String content =
-		 * "This is the text content";
-		 * 
-		 * try {
-		 * 
-		 * file = new File(
-		 * "/media/jorge/a890aa75-9c1b-4a9d-aad8-ec9bf8b240bd/jorge/Almacen/prueba.txt"
-		 * ); fop = new FileOutputStream(file);
-		 * 
-		 * // if file doesnt exists, then create it if (!file.exists()) {
-		 * file.createNewFile(); }
-		 * 
-		 * // get the content in bytes byte[] contentInBytes = a.getBytes();
-		 * 
-		 * fop.write(contentInBytes); fop.flush(); fop.close();
-		 * 
-		 * System.out.println("Done");
-		 * 
-		 * } catch (IOException e) { e.printStackTrace(); }
-		 */
+		th.execQuery("agua");	
 	}
 }

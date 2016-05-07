@@ -146,6 +146,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	/**
 	 *
 	 */
+	@SuppressWarnings("rawtypes")
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
 			throws ScoringFilterException {
@@ -199,6 +200,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		return potentialScore+(10000*boost);
 	}
 
+	@SuppressWarnings({ "unused", "rawtypes" })
 	@Deprecated
 	private float computePotentialScore(float scoreChild, Map metadata) {
 		String anchor = metadata.get(TEXT_ANCHOR).toString();
@@ -209,7 +211,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		// Saving the score
 		return (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
 	}
-
+	@SuppressWarnings("unused")
 	@Deprecated
 	private float relevanceText(String text) {
 		String[] words = text.split(" ");
@@ -242,6 +244,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		return potentialScore+(1000*boost);
 	}		
 	
+	@SuppressWarnings("unused")
 	@Deprecated
 	private float relevance(String content) {		
 		LinkedHashMap<String, Float> terms = termExtractor.extractTerms(content);
