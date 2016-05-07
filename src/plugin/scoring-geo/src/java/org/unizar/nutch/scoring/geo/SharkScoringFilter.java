@@ -1,11 +1,5 @@
 package org.unizar.nutch.scoring.geo;
 
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.Text;
 import org.apache.nutch.crawl.CrawlDatum;
@@ -21,6 +15,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.unizar.nutch.scoring.geo.thesaurus.Thesaurus;
 import org.unizar.nutch.scoring.term.TermFreqAlt;
+
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * This plugin implements the shark-search algorithm
@@ -188,7 +188,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float boost(float potentialScore, Text fromUrl) {
 		int boost = 0;
 		for (String superTerm : superURLTerms) {
-			String url = new String(fromUrl.toString()).toLowerCase();
+			String url = fromUrl.toString().toLowerCase();
 			if(url.contains(superTerm)){
 				boost++;
 			}
@@ -234,7 +234,7 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float relevanceOGC(float potentialScore, String content) {	
 		int boost = 0;
 		for (String superTerm : superAnchorTerms) {
-			String contentCase = new String(content.toLowerCase());
+			String contentCase = content.toLowerCase();
 			if(contentCase.contains(superTerm)){
 				boost++;
 			}
