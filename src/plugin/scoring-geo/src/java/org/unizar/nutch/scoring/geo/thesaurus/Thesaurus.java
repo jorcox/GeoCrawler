@@ -1,7 +1,5 @@
 package org.unizar.nutch.scoring.geo.thesaurus;
 
-import java.io.FileNotFoundException;
-
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -13,15 +11,23 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.SKOS;
 
+import java.io.FileNotFoundException;
+
 public class Thesaurus {
 
 	private static final String themeGeo = "<http://www.eionet.europa.eu/gemet/theme/16>";
 	private static final String themeAir = "<http://www.eionet.europa.eu/gemet/theme/3>";
+	@SuppressWarnings("unused")
 	private static final String themeClimate = "<http://www.eionet.europa.eu/gemet/theme/7>";
+	@SuppressWarnings("unused")
 	private static final String themeAgricultute = "<http://www.eionet.europa.eu/gemet/theme/2>";
+	@SuppressWarnings("unused")
 	private static final String themeFishery = "<http://www.eionet.europa.eu/gemet/theme/12>";
+	@SuppressWarnings("unused")
 	private static final String themeNatural = "<http://www.eionet.europa.eu/gemet/theme/23>";
+	@SuppressWarnings("unused")
 	private static final String themePollution = "<http://www.eionet.europa.eu/gemet/theme/26>";
+	@SuppressWarnings("unused")
 	private static final String themeWater = "<http://www.eionet.europa.eu/gemet/theme/40>";
 	private static final String themeUrban = "<http://www.eionet.europa.eu/gemet/theme/38>";
 	private static final String uriGEMET = "http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#";
@@ -45,7 +51,7 @@ public class Thesaurus {
 
 	public int execQuery(String word) {
 		// System.out.println(word);
-		String queryString = "";
+		String queryString;
 
 		queryString = "PREFIX rdf: <" + RDF.getURI() + "> PREFIX rdfs: <" + RDFS.getURI() + "> PREFIX skos: <"
 				+ SKOS.getURI() + "> PREFIX gemet: <" + uriGEMET + "> "
