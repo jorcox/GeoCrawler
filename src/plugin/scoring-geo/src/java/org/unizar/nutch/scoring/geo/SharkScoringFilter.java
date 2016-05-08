@@ -146,7 +146,6 @@ public class SharkScoringFilter implements ScoringFilter {
 	/**
 	 *
 	 */
-	@SuppressWarnings("rawtypes")
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
 			throws ScoringFilterException {
@@ -200,7 +199,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		return potentialScore+(10000*boost);
 	}
 
-	@SuppressWarnings({ "unused", "rawtypes" })
+	@SuppressWarnings("unused")
 	@Deprecated
 	private float computePotentialScore(float scoreChild, Map metadata) {
 		String anchor = metadata.get(TEXT_ANCHOR).toString();
