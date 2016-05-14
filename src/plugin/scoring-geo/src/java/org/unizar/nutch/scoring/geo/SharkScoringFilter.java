@@ -170,9 +170,9 @@ public class SharkScoringFilter implements ScoringFilter {
 		//String content = parseData.getContentMeta().get(TEXT);
 		//float dataRel = relevanceOGC(0.0f, content);
 		float dataRel = 0.0f;
-		float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
+		//float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
 		for (Entry<Text, CrawlDatum> entry : targets) {
-			float potentialScore = 0.0f;
+			float potentialScore = dataRel;
 			//float potentialScore = computePotentialScore(scoreChild, entry.getValue().getMetaData());
 			Map metadata = entry.getValue().getMetaData();
 			String anchor = metadata.get(TEXT_ANCHOR).toString();
@@ -181,7 +181,7 @@ public class SharkScoringFilter implements ScoringFilter {
 			//potentialScore = relevanceOGC(potentialScore, context);
 			potentialScore = boost(potentialScore, entry.getKey());
 			//LOG.info("Outlink " + oL + entry.getKey().toString() + "  Score : " + potentialScore);
-			entry.getValue().setScore(potentialScore + scoreChild);
+			entry.getValue().setScore(potentialScore);
 		}
 		return null;
 	}
