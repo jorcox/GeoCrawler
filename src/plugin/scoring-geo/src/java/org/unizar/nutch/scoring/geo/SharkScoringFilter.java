@@ -39,6 +39,7 @@ public class SharkScoringFilter implements ScoringFilter {
 
 	private final static String TEXT = "text";
 
+	@SuppressWarnings("unused")
 	private float delta;
 
 	private float beta;
@@ -153,6 +154,7 @@ public class SharkScoringFilter implements ScoringFilter {
 		/*
 		 * Get the inherited score
 		 */
+        @SuppressWarnings("unused")
 		float inheritedScore = scoreInjected; // Default value
 		String scoreString = parseData.getContentMeta().get(Nutch.SCORE_KEY);
 		if (scoreString != null) {
