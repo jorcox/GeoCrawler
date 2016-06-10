@@ -39,23 +39,17 @@ public class OgcIndexWriter implements IndexWriter {
 	public static final Logger LOG = LoggerFactory.getLogger(OgcIndexWriter.class);
 	private final static String RAW_CONTENT = "raw_content";
 	private Configuration config;
-	// private Writer writer;
-	// private boolean delete = false;
+	private String path = "out/";
 
 	public void open(JobConf job, String name) throws IOException {
-		// delete = job.getBoolean(IndexerMapReduce.INDEXER_DELETE, false);
 	}
 
 	@Override
 	public void delete(String key) throws IOException {
-		// if (delete) {
-		// writer.write("delete\t" + key + "\n");
-		// }
 	}
 
 	@Override
 	public void update(NutchDocument doc) throws IOException {
-		// writer.write("update\t" + doc.getFieldValue("id") + "\n");
 	}
 
 	@Override
@@ -71,7 +65,7 @@ public class OgcIndexWriter implements IndexWriter {
 			String url = doc.getField("url").toString();
 			url = formatUrl(url);
 
-			File file = new File("out/" + url);
+			File file = new File(path + url);
 			
 			/* If file doesn't exists, then create it */
 			if (!file.exists()) {
@@ -88,9 +82,6 @@ public class OgcIndexWriter implements IndexWriter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-//		PrintWriter writer = new PrintWriter(doc.getField("url").toString() + ".xml", "UTF-8");
-//		writer.println(raw.toString());
-//		writer.close();
 	}
 
 	private String formatUrl(String url) {
@@ -117,18 +108,7 @@ public class OgcIndexWriter implements IndexWriter {
 	@Override
 	public void setConf(Configuration conf) {
 		config = conf;
-		String path = conf.get("ogc.path");
-//		if (path == null) {
-//			String message = "Missing path. Should be set via -Ddummy.path";
-//			message += "\n" + describe();
-//			LOG.error(message);
-//			throw new RuntimeException(message);
-//		}
-//
-//		try {
-//			writer = new BufferedWriter(new FileWriter(conf.get("dummy.path")));
-//		} catch (IOException e) {
-//		}
+		path = conf.get("ogc.path");
 	}
 
 	public String describe() {

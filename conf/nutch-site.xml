@@ -34,25 +34,31 @@
             based focused crawler.
         </description>
     </property>
-    
+
     <property>
         <name>ogc.outlink.anchor.context</name>
         <value>30</value>
         <description>Boundary</description>
     </property>
-    
+
+    <property>
+        <name>ogc.path</name>
+        <value>out/</value>
+        <description>Path to store the results</description>
+    </property>
+
     <property>
         <name>score.geo.beta</name>
         <value>0.5</value>
         <description>Beta</description>
     </property>
-    
+
     <property>
         <name>score.geo.delta</name>
         <value>0.5</value>
         <description>Delta</description>
     </property>
-    
+
     <property>
         <name>score.geo.gamma</name>
         <value>0.5</value>
@@ -87,9 +93,9 @@
     <property>
       <name>fetcher.server.delay</name>
       <value>0.1</value>
-      <description>The number of seconds the fetcher will delay between 
+      <description>The number of seconds the fetcher will delay between
        successive requests to the same server. Note that this might get
-       overridden by a Crawl-Delay from a robots.txt and is used ONLY if 
+       overridden by a Crawl-Delay from a robots.txt and is used ONLY if
        fetcher.threads.per.queue is set to 1.
        </description>
     </property>
@@ -109,10 +115,10 @@
       <name>fetcher.threads.per.queue</name>
       <value>10</value>
       <description>This number is the maximum number of threads that
-        should be allowed to access a queue at one time. Setting it to 
+        should be allowed to access a queue at one time. Setting it to
         a value > 1 will cause the Crawl-Delay value from robots.txt to
         be ignored and the value of fetcher.server.min.delay to be used
-        as a delay between successive requests to the same server instead 
+        as a delay between successive requests to the same server instead
         of fetcher.server.delay.
        </description>
     </property>
@@ -130,11 +136,11 @@
     <property>
       <name>http.robot.rules.whitelist</name>
       <value>.*</value>
-      <description>Comma separated list of hostnames or IP addresses to ignore 
+      <description>Comma separated list of hostnames or IP addresses to ignore
       robot rules parsing for. Use with care and only if you are explicitly
       allowed by the site owner to ignore the site's robots.txt!
       </description>
     </property>
-    
+
 
 </configuration>

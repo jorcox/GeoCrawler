@@ -50,10 +50,12 @@ public class SharkScoringFilter implements ScoringFilter {
 	private float scoreInjected;
 	private Thesaurus th;
 	private TermFreqAlt termExtractor;
-	
-	private String[] superAnchorTerms = {"services", "servicios", "servicios web", "web services", "ogc", "capabilities"};
-	
-	private String[] superURLTerms = {"wms", "wmts", "wms-c", "csw", "wfs", "atom", "wps-transformacion", "wcts", "wcs", "wps", "ogc"};
+
+	private String[] superAnchorTerms = { "services", "servicios", "servicios web", "web services", "ogc",
+			"capabilities" };
+
+	private String[] superURLTerms = { "wms", "wmts", "wms-c", "csw", "wfs", "atom", "wps-transformacion", "wcts",
+			"wcs", "wps", "ogc" };
 
 	public Configuration getConf() {
 		return conf;
@@ -149,12 +151,12 @@ public class SharkScoringFilter implements ScoringFilter {
 	 */
 	public CrawlDatum distributeScoreToOutlinks(Text fromUrl, ParseData parseData,
 			Collection<Entry<Text, CrawlDatum>> targets, CrawlDatum adjust, int allCount)
-			throws ScoringFilterException {
+					throws ScoringFilterException {
 		LOG.info("URL: " + fromUrl + "   Num. Dest.: " + targets.size());
 		/*
 		 * Get the inherited score
 		 */
-        @SuppressWarnings("unused")
+		@SuppressWarnings("unused")
 		float inheritedScore = scoreInjected; // Default value
 		String scoreString = parseData.getContentMeta().get(Nutch.SCORE_KEY);
 		if (scoreString != null) {
@@ -168,41 +170,79 @@ public class SharkScoringFilter implements ScoringFilter {
 		/*
 		 * Computing the inherited score of child node
 		 */
-		//String content = parseData.getContentMeta().get(TEXT);
-		//float dataRel = relevanceOGC(0.0f, content);
+		ogcAlgorithm(targets);
+		//sharkSearch(targets, parseData, inheritedScore);
+		//sharkSearchThesaurus(targets, parseData, inheritedScore);
+
+/*		// String content = parseData.getContentMeta().get(TEXT);
+		// float dataRel = relevanceOGC(0.0f, content);
 		float dataRel = 0.0f;
-		//float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
+		// float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
 		for (Entry<Text, CrawlDatum> entry : targets) {
 			float potentialScore = dataRel;
-			//float potentialScore = computePotentialScore(scoreChild, entry.getValue().getMetaData());
+			// float potentialScore = computePotentialScore(scoreChild,
+			// entry.getValue().getMetaData());
 			Map metadata = entry.getValue().getMetaData();
 			String anchor = metadata.get(TEXT_ANCHOR).toString();
-			//String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
+			// String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
 			potentialScore = relevanceOGC(potentialScore, anchor);
-			//potentialScore = relevanceOGC(potentialScore, context);
+			// potentialScore = relevanceOGC(potentialScore, context);
 			potentialScore = boost(potentialScore, entry.getKey());
-			//LOG.info("Outlink " + oL + entry.getKey().toString() + "  Score : " + potentialScore);
+			// LOG.info("Outlink " + oL + entry.getKey().toString() + " Score :
+			// " + potentialScore);
+			entry.getValue().setScore(potentialScore);
+		}*/
+		return null;
+	}
+
+	private void sharkSearch(Collection<Entry<Text, CrawlDatum>> targets, ParseData parseData, float inheritedScore) {
+		String content = parseData.getContentMeta().get(TEXT);
+		float dataRel = relevanceOGC(0.0f, content);
+		float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
+		for (Entry<Text, CrawlDatum> entry : targets) {
+			float potentialScore = computePotentialScore(scoreChild, entry.getValue().getMetaData());
 			entry.getValue().setScore(potentialScore);
 		}
-		return null;
+
+	}
+	
+	private void sharkSearchThesaurus(Collection<Entry<Text, CrawlDatum>> targets, ParseData parseData, float inheritedScore) {
+		String content = parseData.getContentMeta().get(TEXT);
+		float dataRel = relevance(content);
+		float scoreChild = delta * dataRel > 0 ? dataRel : inheritedScore;
+		for (Entry<Text, CrawlDatum> entry : targets) {
+			float potentialScore = computePotentialScoreThesaurus(scoreChild, entry.getValue().getMetaData());
+			entry.getValue().setScore(potentialScore);
+		}
+
+	}
+
+	private void ogcAlgorithm(Collection<Entry<Text, CrawlDatum>> targets) {
+		float dataRel = 0.0f;
+		for (Entry<Text, CrawlDatum> entry : targets) {
+			float potentialScore = dataRel;
+			Map metadata = entry.getValue().getMetaData();
+			String anchor = metadata.get(TEXT_ANCHOR).toString();
+			potentialScore = relevanceOGC(potentialScore, anchor);
+			potentialScore = boost(potentialScore, entry.getKey());
+			entry.getValue().setScore(potentialScore);
+		}
 	}
 
 	private float boost(float potentialScore, Text fromUrl) {
 		int boost = 0;
 		for (String superTerm : superURLTerms) {
 			String url = fromUrl.toString().toLowerCase();
-			if(url.contains(superTerm)){
+			if (url.contains(superTerm)) {
 				boost++;
 			}
-			if(url.contains("capabilities")){
+			if (url.contains("capabilities")) {
 				boost += 10;
 			}
 		}
-		return potentialScore+(10000*boost);
+		return potentialScore + (10000 * boost);
 	}
 
-	@SuppressWarnings("unused")
-	@Deprecated
 	private float computePotentialScore(float scoreChild, Map metadata) {
 		String anchor = metadata.get(TEXT_ANCHOR).toString();
 		String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
@@ -212,14 +252,23 @@ public class SharkScoringFilter implements ScoringFilter {
 		// Saving the score
 		return (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
 	}
-	@SuppressWarnings("unused")
-	@Deprecated
+	
+	private float computePotentialScoreThesaurus(float scoreChild, Map metadata) {
+		String anchor = metadata.get(TEXT_ANCHOR).toString();
+		String context = metadata.get(TEXT_ANCHOR_CONTEXT).toString();
+		float anchorScore = relevanceText(anchor);
+		float anchorContextScore = anchorScore > 0 ? 1f : relevanceText(context);
+		float neighbourhoodScore = (beta * anchorScore) + ((1 - beta) * anchorContextScore);
+		// Saving the score
+		return (gamma * scoreChild) + ((1 - gamma) * neighbourhoodScore);
+	}
+
 	private float relevanceText(String text) {
 		String[] words = text.split(" ");
 		float rel = 0.0f;
 		for (String word : words) {
 			word = filter(word);
-			if (word.length() >= 2 && word.length()<100) {
+			if (word.length() >= 2 && word.length() < 100) {
 				int pow = th.execQuery(word);
 				rel += pow;
 			}
@@ -227,42 +276,40 @@ public class SharkScoringFilter implements ScoringFilter {
 		return rel;
 	}
 	
-	
+	private float relevanceOGC(float potentialScore, String content) {
+		int boost = 0;
+		for (String superTerm : superAnchorTerms) {
+			String contentCase = content.toLowerCase();
+			if (contentCase.contains(superTerm)) {
+				boost++;
+			}
+		}
+		return potentialScore + (1000 * boost);
+	}
+
 	private String filter(String word) {
 		word = termExtractor.deleteSymbols(word);
 		word = termExtractor.filterStopWords(word);
 		return word;
 	}
 
-	private float relevanceOGC(float potentialScore, String content) {	
-		int boost = 0;
-		for (String superTerm : superAnchorTerms) {
-			String contentCase = content.toLowerCase();
-			if(contentCase.contains(superTerm)){
-				boost++;
-			}
-		}
-		return potentialScore+(1000*boost);
-	}		
-	
-	@SuppressWarnings("unused")
-	@Deprecated
-	private float relevance(String content) {		
+
+	private float relevance(String content) {
 		LinkedHashMap<String, Float> terms = termExtractor.extractTerms(content);
 		float rel = 0.0f;
 		if (terms != null) {
 			int indx = 0;
 			for (Entry<String, Float> entry : terms.entrySet()) {
 				// TODO N top relevant terms
-				if(indx>=10){
+				if (indx >= 10) {
 					break;
 				}
-				if(entry.getKey().length()<100){
+				if (entry.getKey().length() < 100) {
 					int pow = th.execQuery(entry.getKey());
 					rel += entry.getValue() * pow;
 				}
 				indx++;
-				//System.out.println(indx);
+				// System.out.println(indx);
 			}
 		}
 		return rel;
