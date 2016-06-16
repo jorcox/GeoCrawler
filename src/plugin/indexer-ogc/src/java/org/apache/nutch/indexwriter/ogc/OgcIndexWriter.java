@@ -33,7 +33,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * OgcIndexWriter. This pluggable indexer writes
+ * OgcIndexWriter. This pluggable indexer writes the OGC documents
+ * in the file system.
  */
 public class OgcIndexWriter implements IndexWriter {
 	public static final Logger LOG = LoggerFactory.getLogger(OgcIndexWriter.class);
