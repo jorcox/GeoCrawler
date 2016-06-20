@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="org.unizar.nutch.scoring.geo.SharkScoringFilter" project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/src/plugin/scoring-geo/src/java/org/unizar/nutch/scoring/geo/SharkScoringFilter.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="711" width="547" x="-37" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="org.apache.nutch.scoring.ScoringFilter" project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/src/java/org/apache/nutch/scoring/ScoringFilter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="236" y="77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="org.apache.hadoop.conf.Configurable" project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/build/lib/hadoop-common-2.4.0.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="58" y="-103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" language="java" name="org.apache.nutch.plugin.Pluggable" project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/src/java/org/apache/nutch/plugin/Pluggable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="416" y="-112"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="org.unizar.nutch.scoring.geo.thesaurus.Thesaurus" 
+    project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/src/plugin/scoring-geo/src/java/org/unizar/nutch/scoring/geo/thesaurus/Thesaurus.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="386" y="567"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="org.unizar.nutch.scoring.term.TermFreqAlt" project="GeoCrawler-101Crawlers-" 
+    file="/GeoCrawler-101Crawlers-/src/plugin/scoring-geo/src/java/org/unizar/nutch/scoring/term/TermFreqAlt.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="248" x="-31" y="507"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="termExtractor"/>      
+      <multiplicity id="9" minimum="0" maximum="1">        
+        <position height="16" width="23" x="158" y="479"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="12">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="13" name="th">        
+        <position height="18" width="17" x="310" y="482"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="15">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
